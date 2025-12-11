@@ -1,0 +1,213 @@
+.campuses-section {
+  padding: 80px 20px;
+  background: white;
+  position: relative;
+}
+
+.campuses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.campuses-title {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(100, 19, 32);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.campuses-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.campuses-slider {
+  margin: 0 -10px;
+}
+
+.campus-slide {
+  padding: 0 10px;
+}
+
+.campus-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.campus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(100, 19, 32, 0.2);
+}
+
+.campus-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.campus-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.campus-card:hover .campus-image img {
+  transform: scale(1.1);
+}
+
+.campus-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.campus-name {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(100, 19, 32);
+  margin-bottom: 8px;
+}
+
+.campus-location {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.campus-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgb(100, 19, 32);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.campus-cta:hover {
+  background: rgb(80, 15, 26);
+  color: white;
+  gap: 15px;
+}
+
+.campuses-view-all {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background: white;
+  color: rgb(100, 19, 32);
+  border: 2px solid rgb(100, 19, 32);
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: rgb(100, 19, 32);
+  color: white;
+}
+
+/* Slick carousel customization */
+.campuses-slider .slick-dots {
+  bottom: -40px;
+}
+
+.campuses-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: rgb(100, 19, 32);
+}
+
+.campuses-slider .slick-dots li.slick-active button:before {
+  color: rgb(100, 19, 32);
+}
+
+.campuses-slider .slick-prev,
+.campuses-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.campuses-slider .slick-prev {
+  left: -50px;
+}
+
+.campuses-slider .slick-next {
+  right: -50px;
+}
+
+.campuses-slider .slick-prev:before,
+.campuses-slider .slick-next:before {
+  font-size: 40px;
+  color: rgb(100, 19, 32);
+}
+
+@media (max-width: 1200px) {
+  .campuses-slider .slick-prev {
+    left: -30px;
+  }
+  
+  .campuses-slider .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .campuses-section {
+    padding: 60px 20px;
+  }
+
+  .campuses-title {
+    font-size: 2rem;
+  }
+
+  .campuses-subtitle {
+    font-size: 1rem;
+  }
+
+  .campus-image {
+    height: 200px;
+  }
+
+  .campuses-slider .slick-prev,
+  .campuses-slider .slick-next {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .campuses-title {
+    font-size: 1.5rem;
+  }
+
+  .campus-content {
+    padding: 20px;
+  }
+
+  .campus-name {
+    font-size: 1.1rem;
+  }
+}

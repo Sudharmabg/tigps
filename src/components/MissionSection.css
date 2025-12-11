@@ -1,0 +1,125 @@
+.mission-section {
+  padding: 60px 5%;
+  background-color: white;
+}
+
+.mission-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+}
+
+.mission-image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border: 3px solid rgb(100, 19, 32);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mission-right {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 450px;
+}
+
+.mission-card {
+  background: white;
+  border: 2px solid rgb(100, 19, 32);
+  border-radius: 5px;
+  padding: 20px 25px;
+  position: relative;
+  width: 88%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-title {
+  font-family: 'Lora', serif;
+  color: rgb(100, 19, 32);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-text {
+  font-family: 'Lora', serif;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .mission-container {
+    flex-direction: column;
+  }
+
+  .mission-left,
+  .mission-right {
+    flex: unset;
+    width: 100%;
+  }
+
+  .mission-right {
+    gap: 15px;
+    height: auto;
+  }
+
+  .mission-card {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .mission-section {
+    padding: 40px 15px;
+  }
+
+  .mission-left {
+    height: auto;
+  }
+
+  .mission-image {
+    height: 300px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}

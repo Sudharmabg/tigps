@@ -1,0 +1,133 @@
+.international-section {
+  padding: 80px 20px;
+  background: rgb(100, 19, 32);
+  position: relative;
+}
+
+.international-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.international-title {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.international-text {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.international-slider {
+  margin: 0;
+}
+
+.international-slide {
+  padding: 0;
+}
+
+.international-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.international-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slick carousel customization */
+.international-slider .slick-dots {
+  bottom: -40px;
+}
+
+.international-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+}
+
+.international-slider .slick-dots li.slick-active button:before {
+  color: white;
+}
+
+.international-slider .slick-prev,
+.international-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.international-slider .slick-prev {
+  left: -50px;
+}
+
+.international-slider .slick-next {
+  right: -50px;
+}
+
+.international-slider .slick-prev:before,
+.international-slider .slick-next:before {
+  font-size: 40px;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .international-slider .slick-prev {
+    left: -30px;
+  }
+  
+  .international-slider .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .international-section {
+    padding: 60px 20px;
+  }
+
+  .international-title {
+    font-size: 2rem;
+  }
+
+  .international-text {
+    font-size: 1rem;
+  }
+
+  .international-image {
+    height: 250px;
+  }
+
+  .international-slider .slick-prev,
+  .international-slider .slick-next {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .international-title {
+    font-size: 1.5rem;
+  }
+
+  .international-text {
+    font-size: 0.95rem;
+  }
+
+  .international-image {
+    height: 200px;
+  }
+}

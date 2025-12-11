@@ -1,0 +1,154 @@
+.founder-section {
+  padding: 80px 20px;
+  background: rgb(100, 19, 32);
+  position: relative;
+}
+
+.founder-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founder-title {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  opacity: 1;
+  transform: none;
+}
+
+.founder-content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.founder-left-section {
+  background: transparent;
+  color: white;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  opacity: 1;
+  transform: none;
+}
+
+.founder-perspective-title {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: white;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.founder-perspective-text {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+}
+
+.founder-center-section {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.4s;
+  background: rgb(100, 19, 32);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.founder-center-section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.founder-image-container {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 20px;
+}
+
+.founder-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.founder-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.founder-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.founder-designation {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .founder-content {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-left-section {
+    padding: 20px;
+  }
+
+  .founder-perspective-title {
+    font-size: 1.5rem;
+  }
+
+  .founder-perspective-text {
+    font-size: 1rem;
+  }
+
+  .founder-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-section {
+    padding: 60px 15px;
+  }
+
+  .founder-title {
+    font-size: 1.5rem;
+  }
+
+  .founder-perspective-title {
+    font-size: 1.3rem;
+  }
+
+  .founder-perspective-text {
+    font-size: 0.95rem;
+  }
+}

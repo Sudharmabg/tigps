@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: rgb(100, 19, 32);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+.nav-link {
+    color: white !important;
+    font-family: 'Lora';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    transition: color 0.3s;
+    margin: 0 15px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.header-contact {
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 12px;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+}
+
+.apply-btn {
+    background: white;
+    color: rgb(100, 19, 32);
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-family: 'Lora';
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.apply-btn:hover {
+    background: white;
+    color: rgb(100, 19, 32);
+    border-color: white;
+}
+
+
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 4px 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.header-bottom {
+    margin-top: -15px;
+}
+
+/* Responsive header adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .admission-btn {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    transform: rotate(0deg);
+    opacity: 1;
+    margin-top: -20px;
+    overflow: hidden;
+}
+
+.hero-image {
+    height: 480px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .hero-image {
+        height: 250px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-image {
+        height: 350px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-image {
+        height: 480px;
+    }
+}
+
+/* Facilities Section */
+.facilities {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.facilities h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.facilities-grid {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.facilities-list {
+    flex: 1;
+}
+
+.facility-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.facility-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.facility-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e74c3c;
+    opacity: 0.4;
+    min-width: 80px;
+}
+
+.facility-content {
+    flex: 1;
+}
+
+.facility-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.facility-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.facility-image {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.facility-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .facilities-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .facility-image {
+        width: 100%;
+        height: 300px;
+        order: -1;
+    }
+    
+    .facility-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .facility-number {
+        min-width: auto;
+        font-size: 36px;
+    }
+    
+    .facility-content h3 {
+        font-size: 20px;
+    }
+}
+
+/* Schools Section */
+.schools {
+    background: rgba(100, 19, 32, 1);
+    padding: 80px 0;
+    color: white;
+}
+
+.schools-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.schools-left {
+    flex: 0 0 400px;
+    padding: 40px;
+}
+
+.schools-left h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.view-all-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-all-btn:hover {
+    background: white;
+    color: #8B4513;
+}
+
+.schools-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.schools-right h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.highlight {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.school-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+}
+
+.school-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.school-info {
+    padding: 15px;
+    color: #333;
+}
+
+.school-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.school-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer {
+    background: rgb(100, 19, 32);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .schools-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .schools-left {
+        flex: none;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .schools-left h2 {
+        font-size: 32px;
+    }
+    
+    .schools-grid {
+        grid-template-columns: 1fr;
+    }
+}
