@@ -16,7 +16,7 @@ function SchoolsListPage() {
                 <img src={school.heroImage} alt={school.name} />
                 <div className="school-info">
                   <h4>{school.name}</h4>
-                  <p>{school.location}</p>
+                  <p>{school.address}</p>
                   <p>Contact: {school.contact}</p>
                 </div>
               </Link>

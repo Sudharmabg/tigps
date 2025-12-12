@@ -53,7 +53,7 @@ const AboutSection = () => {
           <div ref={imageRef} className="about-right-section">
             <div className="about-image-container">
               <img 
-                src="pictures/image.jpg" 
+                src="pictures/home/franchise-enquiry.jpg" 
                 alt="Techno India Group Public School campus" 
                 className="about-image"
                 loading="lazy"

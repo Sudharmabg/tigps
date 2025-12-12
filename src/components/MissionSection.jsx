@@ -18,7 +18,7 @@ const MissionSection = () => {
       <div className="mission-container">
         <div className="mission-left">
           <img
-            src="pictures/image.jpg"
+            src="pictures/home/mssn_vission.png"
             alt="TIGPS Campus"
             className="mission-image"
           />

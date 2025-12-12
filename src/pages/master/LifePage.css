@@ -1,0 +1,81 @@
+/* Headings */
+.life-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.life-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* Left Section Line & Spacing */
+.rts-left-section {
+  position: relative;
+  padding-left: 25px;
+}
+
+.rts-left-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  height: 70%;
+  width: 1px;
+  background: #fff;
+}
+
+/* Titles */
+.extra-curricular-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.extra-curricular-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* Image Styling */
+.campus-video {
+  margin-top: 50px;
+}
+
+.campus-video img {
+  width: 100%;
+  /* border-radius: 8px; */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.campus-video img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transition: all 1.2s ease-out;
+}
+
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}

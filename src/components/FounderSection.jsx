@@ -40,7 +40,7 @@ const FounderSection = () => {
           <div ref={centerSectionRef} className="founder-center-section">
             <div className="founder-image-container">
               <img 
-                src="pictures/image.jpg" 
+                src="pictures/home/founder_desk.jpg" 
                 alt="Mr. Satyam Roychowdhury" 
                 className="founder-image" 
               />
