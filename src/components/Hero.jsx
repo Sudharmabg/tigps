@@ -1,24 +1,12 @@
 import React from 'react';
 
-function Hero({ 
-  video = 'pictures/home.mp4', 
-  alt = 'TIGPS' 
-}) {
+function Hero({ image = 'pictures/image.jpg', alt = 'TIGPS' }) {
   return (
-    <section className="hero">
+    <section className="hero container-fluid">
       <div className="row">
         <div className="col-12">
-          <div className="hero-video">
-            <video
-              className="img-fluid w-100"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src={video} type="video/mp4" />
-              {alt}
-            </video>
+          <div className="hero-image">
+            <img src={image} alt={alt} className="img-fluid" />
           </div>
         </div>
       </div>
