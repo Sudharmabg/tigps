@@ -24,12 +24,12 @@ const AchieversSection = () => {
     return () => observer.disconnect();
   }, []);
   const achievers = [
-    { src: 'https://tigps.in/assets/images/gallery/gallery-tennis_(1).png', alt: 'TIGPS Achievers', title: 'Table Tennis Championship 2024' },
-    { src: 'https://tigps.in/assets/images/gallery/gallery-tennis_(1).png', alt: 'TIGPS Achievers', title: 'Table Tennis Championship 2024' },
-    { src: 'https://tigps.in/assets/images/gallery/gallery-tennis_(1).png', alt: 'TIGPS Achievers', title: 'Table Tennis Championship 2024' },
-    { src: 'https://tigps.in/assets/images/gallery/gallery-tennis_(1).png', alt: 'TIGPS Achievers', title: 'Table Tennis Championship 2024' },
-    { src: 'https://tigps.in/assets/images/gallery/gallery-tennis_(1).png', alt: 'TIGPS Achievers', title: 'Table Tennis Championship 2024' },
-    { src: 'https://tigps.in/assets/images/gallery/gallery-tennis_(1).png', alt: 'TIGPS Achievers', title: 'Table Tennis Championship 2024' }
+    { src: '/pictures/achievers/avishikta_dey.jpg', alt: 'TIGPS Achievers', title: 'Avishikta Dey of Techno India Group Public School Siliguri has been awarded the Miss Teen India' },
+    { src: '/pictures/achievers/Ayushmita_Chakraborty.jpg', alt: 'TIGPS Achievers', title: 'Ayushmita Chakraborty of class V Techno Global School, Malda, was honored by 2nd position in all' },
+    { src: '/pictures/achievers/Baiduriya_Biswas.jpg', alt: 'TIGPS Achievers', title: 'Baiduriya Biswas of TIGPS, Hooghly achieved remarkable success in Rifle Shooting, showcasing' },
+    { src: '/pictures/achievers/Ireen_Halder.jpg', alt: 'TIGPS Achievers', title: 'Ireen Halder of TIGPS SIliguri took part in 3 rd Himalayan Swimming Meet at Gangtok and stood 1st' },
+    { src: '/pictures/achievers/Table_Tennis.jpg', alt: 'TIGPS Achievers', title: 'TIGPS, Siliguri, West Bengal had participated in the CBSE National Table Tennis Championship 2023' }
+    
   ];
 
   const settings = {

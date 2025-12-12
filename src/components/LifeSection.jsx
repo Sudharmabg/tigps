@@ -29,14 +29,14 @@ const LifeSection = () => {
   }, []);
 
   const images = [
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Student Activities' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Campus Life' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Events & Celebrations' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Learning Environment' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Student Activities' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Campus Life' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Events & Celebrations' },
-    { src: 'https://tigps.in/assets/images/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'Learning Environment' }
+    { src: '/pictures/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'An enriching educational excursion to the tea plantations and processing industry.' },
+    { src: '/pictures/gallery/gallery-garden-min.png', alt: 'Life at TIGPS', title: 'An exciting excursion to the Butterfly Garden at Rajabhatkhawa.' },
+    { src: '/pictures/gallery/gallery-diwali.png', alt: 'Life at TIGPS', title: 'Diwali Celebration at Techno India Group Public School' },
+    { src: '/pictures/gallery/gallery-agimony.png', alt: 'Life at TIGPS', title: 'Sarodiya Celebrations' },
+    { src: '/pictures/gallery/badminton.png', alt: 'Life at TIGPS', title: 'TIGPS Falakata Ahil Roshen Rahaman has achieved a remarkable feat by winning the State Badminton Championship!' },
+    { src: '/pictures/gallery/science-workshop.png', alt: 'Life at TIGPS', title: 'Edunet Foundation successfully conducted Data Science workshop in TIGPS Nabadwip' },
+    { src: '/pictures/gallery/science-day.png', alt: 'Life at TIGPS', title: 'TIGPS Nabadwip is celebrating National Science Day.' },
+    { src: '/pictures/gallery/annual-meet-falakata.png', alt: 'Life at TIGPS', title: 'TIGPS Falakata organised the Annual Get Together at the school Campus.' }
   ];
 
   const settings = {
