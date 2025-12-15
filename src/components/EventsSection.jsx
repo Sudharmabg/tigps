@@ -90,7 +90,7 @@ const EventsSection = () => {
   return (
     <section ref={sectionRef} className="events-section">
       <div className="events-container">
-        <h2 ref={titleRef} className="events-title">All popular Events</h2>
+        <h2 ref={titleRef} className="events-title">CELEBRATORY EVENTS</h2>
         
         <Slider {...settings} className="events-slider">
           {events.map((event, index) => (

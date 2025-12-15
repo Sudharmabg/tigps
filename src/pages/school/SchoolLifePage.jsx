@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { getSchoolById } from '../../config/schoolsConfig';
+import PopularEvents from '../../components/PopularEvents';
 
 const SchoolLifePage = () => {
   const { schoolId } = useParams();
@@ -47,6 +48,8 @@ const SchoolLifePage = () => {
           </div>
         </div>
       </section>
+      
+      <PopularEvents schoolId={schoolId} />
     </div>
   );
 };

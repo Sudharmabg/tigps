@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import LifeSection from '../../components/LifeSection';
-import EventsSection from '../../components/EventsSection';
+import PopularEvents from '../../components/PopularEvents';
 import AchieversSection from '../../components/AchieversSection';
 import "./LifePage.css";
 const LifePage = () => {
@@ -116,7 +116,7 @@ const LifePage = () => {
       </section>
       
       <LifeSection />
-      <EventsSection />
+      <PopularEvents />
       <AchieversSection />
     </div>
   );

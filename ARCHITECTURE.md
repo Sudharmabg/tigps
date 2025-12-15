@@ -67,6 +67,54 @@ Each school has:
     contact: true,
     customSection: true         // Add custom section
   },
+  content: {                    // School-specific content for each section
+    hero: {
+      title: 'Welcome to School Name',
+      subtitle: 'Excellence in Education',
+      description: 'School-specific hero description'
+    },
+    about: {
+      title: 'About Our School',
+      content: 'Detailed about content for this school...',
+      images: ['/images/school/about1.jpg', '/images/school/about2.jpg'],
+      history: 'Founded in year...',
+      mission: 'Our mission statement...'
+    },
+    academics: {
+      title: 'Academic Excellence',
+      programs: ['Program 1', 'Program 2', 'Program 3'],
+      curriculum: 'CBSE/ICSE/State Board',
+      achievements: ['Achievement 1', 'Achievement 2'],
+      subjects: ['Mathematics', 'Science', 'English'],
+      extracurricular: ['Sports', 'Music', 'Art']
+    },
+    admissions: {
+      title: 'Admissions Process',
+      process: 'Step-by-step admission process...',
+      eligibility: 'Eligibility criteria...',
+      fees: 'Fee structure details...',
+      documents: ['Document 1', 'Document 2'],
+      deadlines: 'Important dates and deadlines'
+    },
+    lifeAtSchool: {
+      title: 'Life at Our School',
+      activities: ['Activity 1', 'Activity 2'],
+      events: ['Annual Day', 'Sports Day'],
+      clubs: ['Science Club', 'Drama Club'],
+      gallery: ['/images/school/life1.jpg', '/images/school/life2.jpg']
+    },
+    contact: {
+      address: 'Complete school address',
+      phone: 'Contact numbers',
+      email: 'school@tigps.in',
+      hours: 'Office hours',
+      directions: 'How to reach us'
+    },
+    customSection: {
+      title: 'Special Features',
+      content: 'School-specific custom content...'
+    }
+  },
   facilities: [...]             // School-specific facilities
 }
 ```
@@ -93,6 +141,24 @@ Each school has:
     gallery: true,
     contact: true
   },
+  content: {
+    hero: {
+      title: 'Welcome to TIGPS New Location',
+      subtitle: 'Building Tomorrow\'s Leaders',
+      description: 'Discover excellence in New City'
+    },
+    about: {
+      title: 'About TIGPS New Location',
+      content: 'Our story and commitment to education...',
+      images: ['/images/new-school/campus.jpg']
+    },
+    academics: {
+      title: 'Academic Programs',
+      programs: ['CBSE Curriculum', 'Advanced Sciences'],
+      achievements: ['100% Pass Rate', 'District Toppers']
+    },
+    // Add other content sections as needed
+  },
   facilities: [
     { number: '01', title: 'Infrastructure', description: '...' },
     // Add more facilities
@@ -104,21 +170,26 @@ Each school has:
 
 ## Conditional Rendering
 
-Components check the school config to show/hide sections:
+Components check the school config to show/hide sections and render school-specific content:
 ```javascript
+{school.sections.hero && <Hero content={school.content.hero} image={school.heroImage} />}
 {school.sections.facilities && <Facilities facilities={school.facilities} />}
-{school.sections.customSection && <CustomSection />}
+{school.sections.academics && <Academics content={school.content.academics} />}
+{school.sections.admissions && <Admissions content={school.content.admissions} />}
+{school.sections.customSection && <CustomSection content={school.content.customSection} />}
 ```
 
 ## Key Features
 
 ✅ Single codebase for all 28 schools
 ✅ Configurable sections per school
+✅ School-specific content for each section
 ✅ Shared header/footer with dynamic navigation
 ✅ Direct URL access to all pages
 ✅ Easy to add/remove schools
-✅ Consistent design across all schools
+✅ Consistent design with unique content
 ✅ SEO-friendly routing
+✅ Flexible content management per school
 
 ## Development
 
