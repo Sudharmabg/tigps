@@ -179,14 +179,53 @@ Components check the school config to show/hide sections and render school-speci
 {school.sections.customSection && <CustomSection content={school.content.customSection} />}
 ```
 
+## Popular Events System
+
+### Dynamic Events Management
+The application includes a comprehensive events system with:
+
+```javascript
+// src/data/eventsData.js
+export const eventsData = [
+  {
+    id: 1,
+    title: 'Annual Sports Day',
+    date: 'March 15-17, 2024',
+    category: 'Sports',
+    shortDescription: 'Brief description for carousel',
+    fullDescription: 'Detailed description for event page',
+    image: '/pictures/events/sports-day.jpg',
+    gallery: ['/path/image1.jpg', '/path/image2.jpg'],
+    highlights: ['Highlight 1', 'Highlight 2']
+  }
+];
+```
+
+### Event Features
+- **Infinite Carousel**: Auto-scrolling events display on Life at TIGPS page
+- **Dynamic Routing**: `/events/:eventId` and `/schools/:schoolId/events/:eventId`
+- **Detailed Pages**: Full event information with image galleries
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **Easy Management**: Add/remove events by editing eventsData.js
+
+### Event Detail Pages
+- **Layout Logic**:
+  - Multiple images: Text → Gallery carousel (full-width)
+  - Single image: Text → Two-column (info left, image right)
+  - No images: Text → Event info below
+- **Navigation**: Breadcrumb navigation and "Back to Events" button
+- **Gallery**: Infinite scrolling image carousel for multiple images
+
 ## Key Features
 
 ✅ Single codebase for all 28 schools
 ✅ Configurable sections per school
 ✅ School-specific content for each section
+✅ Dynamic events system with detailed pages
+✅ Infinite carousel components
 ✅ Shared header/footer with dynamic navigation
 ✅ Direct URL access to all pages
-✅ Easy to add/remove schools
+✅ Easy to add/remove schools and events
 ✅ Consistent design with unique content
 ✅ SEO-friendly routing
 ✅ Flexible content management per school
@@ -203,10 +242,30 @@ Build for production:
 npm run build
 ```
 
+## Adding New Events
+
+1. Open `src/data/eventsData.js`
+2. Add new event object to `eventsData` array:
+```javascript
+{
+  id: 7,
+  title: 'New Event Name',
+  date: 'Event Date',
+  category: 'Category',
+  shortDescription: 'Brief description',
+  fullDescription: 'Detailed description...',
+  image: '/path/to/main/image.jpg',
+  gallery: ['/path/to/gallery1.jpg', '/path/to/gallery2.jpg'],
+  highlights: ['Key point 1', 'Key point 2']
+}
+```
+3. Event automatically appears in carousel and is accessible via routing
+
 ## Next Steps
 
 1. Add remaining 26 schools to `schoolsConfig.js`
 2. Create additional page components (About, Academics, etc.)
-3. Add custom sections for specific schools
-4. Implement gallery, events, and other features
+3. Add school-specific events to configuration
+4. Expand event categories and filtering
 5. Add form handling for admissions
+6. Implement event registration system

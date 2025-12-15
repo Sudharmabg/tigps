@@ -69,6 +69,15 @@ const LifePage = () => {
   ];
   return (
     <div>
+      {/* Hero Image Section */}
+      <section className="hero-image-section" style={{height: '60vh', overflow: 'hidden'}}>
+        <img 
+          src="/pictures/image.jpg" 
+          alt="Life at TIGPS" 
+          style={{width: '100%', height: '100%', objectFit: 'cover'}}
+        />
+      </section>
+
       <section className="hero-section rts-campus rts-section-padding py-5" style={{background: 'rgb(100, 19, 32)', color: 'white',}}>
         <div className="container pb--20">
           <h1 style={{fontSize: '3rem', textAlign: 'center', marginBottom: '20px'}}>Life at TIGPS</h1>
