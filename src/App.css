@@ -42,11 +42,25 @@ header {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
     margin: 0 15px;
+    display: inline-block;
 }
 
-.nav-link:hover, .nav-link.active {
+@media (min-width: 992px) {
+    .nav-link:hover {
+        color: rgba(255, 255, 255, 0.8) !important;
+        transform: scale(1.1);
+        animation: bounce 0.5s ease;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1.1) translateY(0); }
+    50% { transform: scale(1.1) translateY(-3px); }
+}
+
+.nav-link.active {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
@@ -97,6 +111,36 @@ header {
 }
 
 /* Responsive header adjustments */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 20px 15px;
+        background: rgba(100, 19, 32, 0.98);
+        margin-left: -12px;
+        margin-right: -12px;
+        text-align: right;
+    }
+    
+    .navbar-nav {
+        display: inline-block !important;
+        text-align: right;
+    }
+    
+    .nav-item {
+        display: block;
+        text-align: right;
+        margin: 5px 0;
+    }
+    
+    .apply-btn-wrapper {
+        display: inline-block;
+        text-align: right;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .logo img {
         width: 45px;
