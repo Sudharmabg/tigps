@@ -6,7 +6,7 @@ import LegacySection from '../../components/LegacySection';
 import FounderSection from '../../components/FounderSection';
 import CampusesSection from '../../components/CampusesSection';
 import InternationalSection from '../../components/InternationalSection';
-import AchieversSection from '../../components/AchieversSection';
+
 
 function HomePage() {
   return (
@@ -18,7 +18,6 @@ function HomePage() {
       <FounderSection />
       <CampusesSection />
       <InternationalSection />
-      <AchieversSection />
     </>
   );
 }

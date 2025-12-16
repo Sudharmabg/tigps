@@ -179,60 +179,59 @@
   }
   
   .events-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
   }
   
   .events-track {
-    width: calc(250px * 12 + 20px * 11);
+    width: calc(100vw * 12 - 40px * 11);
+    animation: scrollMobile 15s linear infinite;
   }
   
   .event-slide {
-    flex: 0 0 250px;
+    flex: 0 0 calc(100vw - 40px);
     margin-right: 20px;
   }
   
   .event-card {
-    height: 350px;
+    height: 320px;
+    margin: 0 10px;
   }
   
   .event-image {
-    height: 200px;
+    height: 180px;
   }
   
   .event-content {
-    padding: 15px;
+    padding: 12px;
   }
   
   .event-description {
-    font-size: 13px;
+    font-size: 12px;
+    -webkit-line-clamp: 2;
   }
   
-  @keyframes scroll {
+  .event-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+  
+  @keyframes scrollMobile {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 6 - 20px * 5));
+      transform: translateX(calc(-100vw * 6 + 20px * 5));
     }
   }
   
   .carousel-nav {
-    width: 40px;
-    height: 40px;
+    display: none;
   }
   
-  .carousel-nav.prev {
-    left: 5px;
-  }
-  
-  .carousel-nav.next {
-    right: 5px;
-  }
-  
-  .carousel-nav svg {
-    width: 16px;
-    height: 16px;
+  /* Remove hover pause on mobile */
+  .events-carousel:hover .events-track {
+    animation-play-state: running;
   }
 }
 

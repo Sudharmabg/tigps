@@ -108,6 +108,14 @@
     font-size: 1rem;
   }
 
+  .international-slider {
+    margin: 0;
+  }
+
+  .international-slide {
+    padding: 0 5px;
+  }
+
   .international-image {
     height: 250px;
   }
@@ -115,6 +123,26 @@
   .international-slider .slick-prev,
   .international-slider .slick-next {
     display: none !important;
+  }
+
+  .international-slider .slick-dots {
+    display: none !important;
+  }
+
+  .international-slider .slick-slide {
+    width: 100% !important;
+  }
+
+  .international-slider .slick-track {
+    display: flex !important;
+  }
+
+  .international-slider .slick-slide > div {
+    width: 100% !important;
+  }
+
+  .international-slider .slick-list {
+    overflow: hidden !important;
   }
 }
 

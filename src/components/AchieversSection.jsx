@@ -47,14 +47,19 @@ const AchieversSection = () => {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2200
         }
       },
       {
-        breakpoint: 576,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: false
         }
       }
     ]

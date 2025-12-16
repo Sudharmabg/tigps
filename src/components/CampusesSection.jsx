@@ -8,10 +8,18 @@ import './CampusesSection.css';
 
 const CampusesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
   const schools = getAllSchools();
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,16 +32,31 @@ const CampusesSection = () => {
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
-  const settings = {
+  const settings = isMobile ? {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    arrows: false,
+    centerMode: false,
+    variableWidth: false
+  } : {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: isVisible,
+    autoplay: true,
     autoplaySpeed: 3500,
     pauseOnHover: true,
     responsive: [
@@ -41,14 +64,9 @@ const CampusesSection = () => {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 3000
         }
       }
     ]
@@ -69,7 +87,7 @@ const CampusesSection = () => {
                 </div>
                 <div className="campus-content">
                   <h3 className="campus-name">{school.name}</h3>
-                  <p className="campus-location">{school.location}</p>
+                  <p className="campus-location">{school.location.toUpperCase()}</p>
                   <Link to={`/schools/${school.id}`} className="campus-cta">
                     Explore Campus
                     <i className="fas fa-arrow-right"></i>

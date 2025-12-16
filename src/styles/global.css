@@ -75,14 +75,30 @@ p {
 
 /* Hero Section */
 .hero {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
   padding: 0;
-  margin: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero-image img {
-  width: 100%;
-  height: 200px;
+  width: 120%;
+  height: 100%;
   object-fit: cover;
+  position: relative;
+  left: -10%;
+  display: block;
 }
 
 /* Content Sections */
@@ -158,7 +174,7 @@ footer {
     padding: 12px 0;
   }
   
-  .hero-image img {
+  .hero-image {
     height: 160px;
   }
   
@@ -204,7 +220,7 @@ footer {
     padding: 20px 0;
   }
   
-  .hero-image img {
+  .hero-image {
     height: 240px;
   }
   
@@ -250,7 +266,7 @@ footer {
     padding: 24px 0;
   }
   
-  .hero-image img {
+  .hero-image {
     height: 280px;
   }
   

@@ -122,15 +122,28 @@
 
 @media (max-width: 768px) {
   .achievers-section {
-    padding: 60px 20px;
+    padding: 40px 15px;
   }
 
   .achievers-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .achievers-slider {
+    margin: 0 10px;
   }
 
   .achiever-image {
-    height: 300px;
+    height: 250px;
+  }
+
+  .achiever-overlay {
+    padding: 15px;
+  }
+
+  .achiever-title {
+    font-size: 1rem;
   }
 
   .achievers-slider .slick-prev,
@@ -140,11 +153,27 @@
 }
 
 @media (max-width: 480px) {
+  .achievers-section {
+    padding: 30px 10px;
+  }
+
   .achievers-title {
     font-size: 1.5rem;
   }
 
+  .achievers-slider {
+    margin: 0 5px;
+  }
+
   .achiever-image {
-    height: 250px;
+    height: 200px;
+  }
+
+  .achiever-overlay {
+    padding: 10px;
+  }
+
+  .achiever-title {
+    font-size: 0.9rem;
   }
 }

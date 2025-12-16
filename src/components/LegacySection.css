@@ -215,37 +215,52 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .legacy-section {
-    padding: 60px 15px;
+    padding: 40px 15px;
   }
 
   .legacy-title {
     font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legacy-section {
+    padding: 30px 10px;
+  }
+
+  .legacy-title {
+    font-size: 1.5rem;
   }
 
   .timeline-line {
-    left: 15px;
-    height: calc(98% - 140px);
+    left: 12px;
+    height: calc(98% - 120px);
   }
   
   .timeline-dot {
-    left: 17px;
-    width: 14px;
-    height: 14px;
+    left: 14px;
+    width: 12px;
+    height: 12px;
   }
   
   .timeline-content {
-    margin-left: 40px;
-    width: calc(100% - 55px);
-    padding: 12px;
+    margin-left: 35px;
+    width: calc(100% - 45px);
+    padding: 10px 12px;
+    height: auto;
+    min-height: 80px;
   }
   
   .timeline-year {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 6px;
   }
   
   .timeline-description {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
   }
 }

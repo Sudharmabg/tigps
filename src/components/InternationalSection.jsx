@@ -6,9 +6,17 @@ import './InternationalSection.css';
 
 const InternationalSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -21,7 +29,10 @@ const InternationalSection = () => {
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
   const images = [
     { src: 'https://tigps.in/assets/images/international-relations/inter2.png', alt: 'International collaboration' },
@@ -32,7 +43,19 @@ const InternationalSection = () => {
     { src: 'https://tigps.in/assets/images/international-relations/inter4.png', alt: 'Global education' }
   ];
 
-  const settings = {
+  const settings = isMobile ? {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    arrows: false,
+    centerMode: false,
+    variableWidth: false
+  } : {
     dots: true,
     infinite: true,
     speed: 500,
@@ -47,13 +70,6 @@ const InternationalSection = () => {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
           slidesToScroll: 1
         }
       }
