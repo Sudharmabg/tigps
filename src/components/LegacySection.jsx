@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './LegacySection.css';
 
-const LegacySection = () => {
+const LegacySection = ({ schoolData }) => {
   const titleRef = useRef(null);
   const timelineRef = useRef(null);
   const [visibleItems, setVisibleItems] = useState([]);

@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './CampusesSection.css';
 
-const CampusesSection = () => {
+const CampusesSection = ({ schoolData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
@@ -75,33 +75,62 @@ const CampusesSection = () => {
   return (
     <section ref={sectionRef} className="campuses-section">
       <div className="campuses-container">
-        <h2 className="campuses-title">OUR CAMPUSES</h2>
-        <p className="campuses-subtitle">Explore our {schools.length} schools across West Bengal</p>
+        <h2 className="campuses-title">{schoolData ? 'OUR FACILITIES' : 'OUR CAMPUSES'}</h2>
+        <p className="campuses-subtitle">
+          {schoolData ? 
+            `Discover world-class facilities at ${schoolData.name}` : 
+            `Explore our ${schools.length} schools across West Bengal`
+          }
+        </p>
         
         <Slider {...settings} className="campuses-slider">
-          {schools.map((school, index) => (
-            <div key={index} className="campus-slide">
-              <div className="campus-card">
-                <div className="campus-image">
-                  <img src={school.heroImage} alt={school.name} />
-                </div>
-                <div className="campus-content">
-                  <h3 className="campus-name">{school.name}</h3>
-                  <p className="campus-location">{school.location.toUpperCase()}</p>
-                  <Link to={`/schools/${school.id}`} className="campus-cta">
-                    Explore Campus
-                    <i className="fas fa-arrow-right"></i>
-                  </Link>
+          {schoolData ? 
+            schoolData.facilities?.map((facility, index) => (
+              <div key={index} className="campus-slide">
+                <div className="campus-card">
+                  <div className="campus-image">
+                    <img src={schoolData.heroImage} alt={facility.title} />
+                  </div>
+                  <div className="campus-content">
+                    <h3 className="campus-name">{facility.title}</h3>
+                    <p className="campus-location">{facility.description}</p>
+                    <div className="campus-cta">
+                      Learn More
+                      <i className="fas fa-arrow-right"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )) :
+            schools.map((school, index) => (
+              <div key={index} className="campus-slide">
+                <div className="campus-card">
+                  <div className="campus-image">
+                    <img src={school.heroImage} alt={school.name} />
+                  </div>
+                  <div className="campus-content">
+                    <h3 className="campus-name">{school.name}</h3>
+                    <p className="campus-location">{school.location.toUpperCase()}</p>
+                    <Link to={`/schools/${school.id}`} className="campus-cta">
+                      Explore Campus
+                      <i className="fas fa-arrow-right"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
         </Slider>
 
         <div className="campuses-view-all">
-          <Link to="/schools" className="view-all-btn">
-            View All Schools
-          </Link>
+          {schoolData ? 
+            <Link to={`/schools/${schoolData.id}/contact`} className="view-all-btn">
+              Contact Us
+            </Link> :
+            <Link to="/schools" className="view-all-btn">
+              View All Schools
+            </Link>
+          }
         </div>
       </div>
     </section>

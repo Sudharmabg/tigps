@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './AchieversSection.css';
 
-const AchieversSection = () => {
+const AchieversSection = ({ schoolData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getAllEvents } from '../data/eventsData';
 import './PopularEvents.css';
 
-const PopularEvents = ({ events, schoolId }) => {
+const PopularEvents = ({ events, schoolId, schoolData }) => {
   const eventsToShow = events || getAllEvents();
   const baseUrl = schoolId ? `/schools/${schoolId}` : '';
 

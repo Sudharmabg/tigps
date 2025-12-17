@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS' }) {
+function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', schoolData }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const banners = [
@@ -79,7 +79,7 @@ function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS' })
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src={image} alt={alt} />
+        <img src={schoolData ? schoolData.heroImage : image} alt={schoolData ? schoolData.name : alt} />
       </div>
     </section>
   );

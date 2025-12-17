@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './LifeSection.css';
 
-const LifeSection = () => {
+const LifeSection = ({ schoolData }) => {
   const [isVisible, setIsVisible] = useState(false);
   const titleRef = useRef(null);
   const sectionRef = useRef(null);
