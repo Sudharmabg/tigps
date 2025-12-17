@@ -75,3 +75,22 @@
 .submit-btn:hover {
   background: rgb(80, 15, 26);
 }
+
+@media (max-width: 576px) {
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .form-group input,
+  .form-group select {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .modal-header h3 {
+    font-size: 1.25rem;
+  }
+}
