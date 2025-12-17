@@ -5,23 +5,37 @@ import 'slick-carousel/slick/slick-theme.css';
 import './AchieversSection.css';
 
 const AchieversSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+   const [isVisible, setIsVisible] = useState(true);
+  const [slidesToShow, setSlidesToShow] = useState(4); // DESKTOP
   const sectionRef = useRef(null);
 
+    /* 🔹 Intersection Observer */
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
+      ([entry]) => entry.isIntersecting && setIsVisible(true),
       { threshold: 0.3 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
+  }, []);
+
+   useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width <= 768) {
+        setSlidesToShow(1);        // MOBILE
+      } else if (width <= 992) {
+        setSlidesToShow(2);        // TABLET
+      } else {
+        setSlidesToShow(4);        // DESKTOP
+      }
+    };
+
+    handleResize(); // initial
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   const achievers = [
     { src: '/pictures/achievers/avishikta_dey.jpg', alt: 'TIGPS Achievers', title: 'Avishikta Dey of Techno India Group Public School Siliguri has been awarded the Miss Teen India' },
@@ -35,34 +49,15 @@ const AchieversSection = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 700,
+    slidesToShow: slidesToShow,   // 🔥 Controlled by JS
     slidesToScroll: 1,
     autoplay: isVisible,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
     cssEase: 'linear',
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2200
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          pauseOnHover: false
-        }
-      }
-    ]
+    centerMode: false,
+    centerPadding: '0px'
   };
 
   return (

@@ -5,10 +5,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import './LifeSection.css';
 
 const LifeSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [slidesToShow, setSlidesToShow] = useState(4); // DEFAULT DESKTOP
   const titleRef = useRef(null);
   const sectionRef = useRef(null);
 
+  /* 🔹 INTERSECTION OBSERVER */
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,55 +30,60 @@ const LifeSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  /* 🔥 JS MOBILE / TABLET / DESKTOP DETECTION */
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width <= 600) {
+        setSlidesToShow(1);       // MOBILE
+      } else if (width <= 992) {
+        setSlidesToShow(2);       // TABLET
+      } else {
+        setSlidesToShow(4);       // DESKTOP
+      }
+    };
+
+    handleResize(); // initial
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const images = [
-    { src: '/pictures/gallery/tea-gallery-min.png', alt: 'Life at TIGPS', title: 'An enriching educational excursion to the tea plantations and processing industry.' },
-    { src: '/pictures/gallery/gallery-garden-min.png', alt: 'Life at TIGPS', title: 'An exciting excursion to the Butterfly Garden at Rajabhatkhawa.' },
-    { src: '/pictures/gallery/gallery-diwali.png', alt: 'Life at TIGPS', title: 'Diwali Celebration at Techno India Group Public School' },
-    { src: '/pictures/gallery/gallery-agimony.png', alt: 'Life at TIGPS', title: 'Sarodiya Celebrations' },
-    { src: '/pictures/gallery/badminton.png', alt: 'Life at TIGPS', title: 'TIGPS Falakata Ahil Roshen Rahaman has achieved a remarkable feat by winning the State Badminton Championship!' },
-    { src: '/pictures/gallery/science-workshop.png', alt: 'Life at TIGPS', title: 'Edunet Foundation successfully conducted Data Science workshop in TIGPS Nabadwip' },
-    { src: '/pictures/gallery/science-day.png', alt: 'Life at TIGPS', title: 'TIGPS Nabadwip is celebrating National Science Day.' },
-    { src: '/pictures/gallery/annual-meet-falakata.png', alt: 'Life at TIGPS', title: 'TIGPS Falakata organised the Annual Get Together at the school Campus.' }
+    { src: '/pictures/gallery/tea-gallery-min.png', title: 'An enriching educational excursion to the tea plantations and processing industry.' },
+    { src: '/pictures/gallery/gallery-garden-min.png', title: 'An exciting excursion to the Butterfly Garden at Rajabhatkhawa.' },
+    { src: '/pictures/gallery/gallery-diwali.png', title: 'Diwali Celebration at Techno India Group Public School' },
+    { src: '/pictures/gallery/gallery-agimony.png', title: 'Sarodiya Celebrations' },
+    { src: '/pictures/gallery/badminton.png', title: 'State Badminton Championship Winner' },
+    { src: '/pictures/gallery/science-workshop.png', title: 'Data Science Workshop at TIGPS' },
+    { src: '/pictures/gallery/science-day.png', title: 'National Science Day Celebration' },
+    { src: '/pictures/gallery/annual-meet-falakata.png', title: 'Annual Get Together at TIGPS Falakata' }
   ];
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: slidesToShow,  
     slidesToScroll: 1,
     autoplay: isVisible,
     autoplaySpeed: 3200,
     cssEase: 'linear',
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+    pauseOnHover: true,
+    centerMode: false,
+    centerPadding: '0px'
   };
 
   return (
     <section ref={sectionRef} className="life-section">
       <div className="life-container">
         <h2 ref={titleRef} className="life-title">Life at TIGPS</h2>
-        
+
         <Slider {...settings} className="life-slider">
           {images.map((image, index) => (
             <div key={index} className="life-slide">
               <div className="life-image">
-                <img src={image.src} alt={image.alt} />
+                <img src={image.src} alt="Life at TIGPS" />
                 <div className="life-overlay">
                   <p className="life-image-title">{image.title}</p>
                 </div>
@@ -84,6 +91,7 @@ const LifeSection = () => {
             </div>
           ))}
         </Slider>
+
       </div>
     </section>
   );

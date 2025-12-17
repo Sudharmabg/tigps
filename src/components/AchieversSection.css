@@ -121,9 +121,9 @@
 }
 
 @media (max-width: 768px) {
-  .achievers-section {
+  /* .achievers-section {
     padding: 40px 15px;
-  }
+  } */
 
   .achievers-title {
     font-size: 1.8rem;
@@ -135,7 +135,7 @@
   }
 
   .achiever-image {
-    height: 250px;
+    height: auto;
   }
 
   .achiever-overlay {
@@ -153,9 +153,9 @@
 }
 
 @media (max-width: 480px) {
-  .achievers-section {
+  /* .achievers-section {
     padding: 30px 10px;
-  }
+  } */
 
   .achievers-title {
     font-size: 1.5rem;
@@ -166,7 +166,7 @@
   }
 
   .achiever-image {
-    height: 200px;
+    height: auto;
   }
 
   .achiever-overlay {
