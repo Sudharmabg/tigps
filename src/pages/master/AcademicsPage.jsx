@@ -360,7 +360,21 @@ const AcademicsPage = () => {
           </div>
           
           <div style={{textAlign: 'center', marginTop: '30px'}}>
-            <p style={{fontSize: '1.2rem', fontWeight: 'bold', color: 'rgb(100, 19, 32)', fontFamily: 'Lora', cursor: 'pointer'}}>Click here to open the Question Bank</p>
+            <a
+              href="https://tigps.in/tigps-question-bank-login"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "bold",
+                color: "rgb(100, 19, 32)",
+                fontFamily: "Lora",
+                cursor: "pointer",
+                textDecoration: "none"
+              }}
+            >
+              Click here to open the Question Bank
+            </a>
           </div>
         </div>
       </section>
@@ -402,7 +416,21 @@ const AcademicsPage = () => {
           </div>
           
           <div style={{textAlign: 'center', marginTop: '30px'}}>
-            <p style={{fontSize: '1.2rem', fontWeight: 'bold', color: 'white', fontFamily: 'Lora', cursor: 'pointer'}}>Click here to open the Techno AEP</p>
+            <a
+              href="https://tigps.in/techno-ace-mpt-questions-answers"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: "1.2rem",
+                fontWeight: "bold",
+                color: "rgba(255, 251, 251, 1)",
+                fontFamily: "Lora",
+                cursor: "pointer",
+                textDecoration: "none"
+              }}
+            >
+              Click here to open the Techno AEP
+            </a>
           </div>
         </div>
       </section>
