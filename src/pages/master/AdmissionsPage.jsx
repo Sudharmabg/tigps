@@ -108,16 +108,20 @@ const AdmissionsPage = () => {
             </ol>
           </div>
           
-          <div style={{background: 'rgb(100, 19, 32)', color: 'white', padding: '20px', borderRadius: '10px', textAlign: 'center'}}>
+          <div style={{background: 'rgb(100, 19, 32)', color: 'white', padding: '20px', borderRadius: '10px', textAlign: 'center', marginBottom: '40px'}}>
             <h4 style={{fontSize: '1.2rem', fontWeight: '600', marginBottom: '10px', fontFamily: 'Lora'}}>Withdrawal Policy</h4>
             <p style={{fontSize: '0.95rem', lineHeight: '1.6', fontFamily: 'Lora', marginBottom: '0'}}>Those who take Transfer Certificate in middle of the academic year are liable to pay the fees for the remaining months of the entire academic year.</p>
+          </div>
+          
+          <div style={{textAlign: 'center'}}>
+            <img src="/pictures/admission/admission-open.png" alt="Admission Open" style={{maxWidth: '600px', width: '100%', borderRadius: '10px', boxShadow: '0 8px 20px rgba(0,0,0,0.1)'}}/>
           </div>
         </div>
       </section>
       
       {/* Application Form Section */}
       <section style={{padding: '40px 20px', background: 'white'}}>
-        <div style={{maxWidth: '800px', margin: '0 auto'}}>
+        <div style={{maxWidth: '600px', margin: '0 auto'}}>
           <h2 style={{fontSize: '2.5rem', fontWeight: '700', color: 'rgb(100, 19, 32)', textAlign: 'center', marginBottom: '30px', fontFamily: 'Lora'}}>Application Form</h2>
           
           <div style={{background: '#f8f9fa', padding: '40px', borderRadius: '10px', border: '2px solid rgb(100, 19, 32)'}}>
@@ -125,59 +129,31 @@ const AdmissionsPage = () => {
             
             <form>
               <div style={{marginBottom: '20px'}}>
-                <input type="text" placeholder="Enter Parent name *" style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora'}} />
+                <input type="text" placeholder="Enter Parent name *" style={{width: '100%', padding: '12px', border: '2px solid rgb(100, 19, 32)', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: 'rgb(100, 19, 32)'}} />
               </div>
               
               <div style={{marginBottom: '20px'}}>
-                <input type="text" placeholder="Enter Student Name *" style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora'}} />
+                <input type="text" placeholder="Enter Student Name *" style={{width: '100%', padding: '12px', border: '2px solid rgb(100, 19, 32)', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: 'rgb(100, 19, 32)'}} />
               </div>
               
               <div style={{marginBottom: '20px'}}>
-                <input type="email" placeholder="Enter Email *" style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora'}} />
+                <input type="email" placeholder="Enter Email *" style={{width: '100%', padding: '12px', border: '2px solid rgb(100, 19, 32)', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: 'rgb(100, 19, 32)'}} />
               </div>
               
               <div style={{marginBottom: '20px'}}>
-                <input type="tel" placeholder="Enter Contact No *" style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora'}} />
+                <input type="tel" placeholder="Enter Contact No *" style={{width: '100%', padding: '12px', border: '2px solid rgb(100, 19, 32)', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: 'rgb(100, 19, 32)'}} />
               </div>
               
               <div style={{marginBottom: '20px'}}>
-                <select style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: '#666'}}>
-                  <option>---- Select School ----</option>
-                  <option>TIGPS - Siliguri</option>
-                  <option>TIGPS - Alipurduar</option>
-                  <option>TIGPS - Durgapur</option>
-                  <option>TIGPS - Kolkata</option>
-                </select>
-              </div>
-              
-              <div style={{marginBottom: '20px'}}>
-                <select style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: '#666'}}>
-                  <option>---- Select Class ----</option>
-                  <option>PlayGroup</option>
-                  <option>Nursery</option>
-                  <option>KG</option>
-                  <option>Class I</option>
-                  <option>Class II</option>
-                </select>
-              </div>
-              
-              <div style={{marginBottom: '20px'}}>
-                <select style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: '#666'}}>
-                  <option>---- Select State ----</option>
-                  <option>West Bengal</option>
-                  <option>Assam</option>
-                  <option>Bihar</option>
-                  <option>Jharkhand</option>
-                </select>
+                <input type="text" placeholder="Enter Class *" style={{width: '100%', padding: '12px', border: '2px solid rgb(100, 19, 32)', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: 'rgb(100, 19, 32)'}} />
               </div>
               
               <div style={{marginBottom: '30px'}}>
-                <input type="text" placeholder="Enter City Name *" style={{width: '100%', padding: '12px', border: '1px solid #ddd', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora'}} />
+                <input type="text" placeholder="Enter City Name *" style={{width: '100%', padding: '12px', border: '2px solid rgb(100, 19, 32)', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', color: 'rgb(100, 19, 32)'}} />
               </div>
               
-              <div style={{display: 'flex', gap: '15px', justifyContent: 'center'}}>
-                <button type="button" style={{background: '#f8f9fa', color: '#666', border: '2px solid #ddd', padding: '12px 30px', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', cursor: 'pointer'}}>Close</button>
-                <button type="submit" style={{background: 'rgb(100, 19, 32)', color: 'white', border: 'none', padding: '12px 30px', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', cursor: 'pointer'}}>Submit</button>
+              <div style={{textAlign: 'center'}}>
+                <button type="submit" style={{background: 'rgb(100, 19, 32)', color: 'white', border: 'none', padding: '12px 40px', borderRadius: '5px', fontSize: '1rem', fontFamily: 'Lora', cursor: 'pointer'}}>Submit</button>
               </div>
             </form>
           </div>

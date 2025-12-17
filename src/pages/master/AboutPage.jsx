@@ -44,11 +44,19 @@ const AboutPage = () => {
 
       {/* Mission & Vision Section */}
       <section style={{padding: '80px 20px', background: 'white'}}>
-        <div style={{maxWidth: '1200px', margin: '0 auto', textAlign: 'center'}}>
-          <h2 style={{fontSize: '2.5rem', fontWeight: '700', color: 'rgb(100, 19, 32)', marginBottom: '30px', fontFamily: 'Lora'}}>Techno India Group Public School: Empowering Tomorrow's Leaders</h2>
-          <p style={{fontSize: '1.1rem', lineHeight: '1.8', color: '#333', marginBottom: '50px', fontFamily: 'Lora'}}>
-            Welcome to Techno India Group Public Schools, where we believe in nurturing young minds to become the leaders of tomorrow. With nearly 20 prestigious Schools across West Bengal, our commitment to excellence in education is unwavering. At Techno India Group Public Schools, our mission and vision are the cornerstones that guide our journey towards academic and holistic development.
-          </p>
+        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
+          <h2 style={{fontSize: '2.5rem', fontWeight: '700', color: 'rgb(100, 19, 32)', marginBottom: '30px', fontFamily: 'Lora', textAlign: 'center'}}>Techno India Group Public School: Empowering Tomorrow's Leaders</h2>
+          
+          <div className="row align-items-center" style={{marginBottom: '50px'}}>
+            <div className="col-lg-7 mb-4">
+              <p style={{fontSize: '1.1rem', lineHeight: '1.8', color: '#333', fontFamily: 'Lora', textAlign: 'left'}}>
+                Welcome to Techno India Group Public Schools, where we believe in nurturing young minds to become the leaders of tomorrow. With nearly 20 prestigious Schools across West Bengal, our commitment to excellence in education is unwavering. At Techno India Group Public Schools, our mission and vision are the cornerstones that guide our journey towards academic and holistic development.
+              </p>
+            </div>
+            <div className="col-lg-5 mb-4">
+              <img src="/pictures/mission_vision/vission_mission.png" alt="Mission and Vision" style={{width: '100%', borderRadius: '10px', boxShadow: '0 8px 20px rgba(0,0,0,0.1)'}}/>
+            </div>
+          </div>
           
           <div className="row">
             <div className="col-md-6 mb-4">
@@ -61,7 +69,6 @@ const AboutPage = () => {
                 </ul>
               </div>
             </div>
-            
             <div className="col-md-6 mb-4">
               <div style={{background: '#f8f9fa', padding: '40px', borderRadius: '10px', height: '100%', border: '2px solid rgb(100, 19, 32)'}}>
                 <h3 style={{fontSize: '2rem', fontWeight: '700', color: 'rgb(100, 19, 32)', marginBottom: '20px', fontFamily: 'Lora'}}>Vision</h3>
@@ -92,14 +99,15 @@ const AboutPage = () => {
             A key feature of the TIGPS educational approach is the Continuous and Comprehensive Evaluation (CCE) system, implemented as per CBSE guidelines. This system emphasizes regular assessment and feedback, facilitating a well-rounded educational experience that supports both academic and personal growth. The CCE framework ensures that evaluations are conducted throughout the academic year, providing a balanced and thorough assessment of each student's progress.
           </p>
           
-          <div style={{overflowX: 'auto', marginBottom: '30px', display: 'flex', justifyContent: 'center'}}>
-            <table style={{width: '80%', maxWidth: '800px', backgroundColor: 'white', color: '#333', borderRadius: '10px', overflow: 'hidden', fontFamily: 'Lora', border: '2px solid #333', borderCollapse: 'collapse'}}>
+          <p style={{fontSize: '0.9rem', textAlign: 'center', marginBottom: '10px', fontFamily: 'Lora', display: window.innerWidth <= 768 ? 'block' : 'none'}}>← Scroll horizontally to view all columns →</p>
+          <div style={{overflowX: 'auto', marginBottom: '30px', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'thin', scrollbarColor: 'rgba(255,255,255,0.5) transparent'}}>
+            <table style={{width: '100%', minWidth: '600px', maxWidth: '800px', margin: '0 auto', backgroundColor: 'white', color: '#333', borderRadius: '10px', overflow: 'hidden', fontFamily: 'Lora', border: '2px solid #333', borderCollapse: 'collapse'}}>
               <thead>
                 <tr style={{backgroundColor: 'white'}}>
-                  <th style={{padding: '10px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: '0.9rem', color: 'rgb(100, 19, 32)'}}>SL NO</th>
-                  <th style={{padding: '10px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: '0.9rem', color: 'rgb(100, 19, 32)'}}>SCHOOL</th>
-                  <th style={{padding: '10px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: '0.9rem', color: 'rgb(100, 19, 32)'}}>CLASS</th>
-                  <th style={{padding: '10px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: '0.9rem', color: 'rgb(100, 19, 32)'}}>AFFILIATION NUMBER</th>
+                  <th style={{padding: '12px 8px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: 'clamp(0.75rem, 2vw, 0.9rem)', color: 'rgb(100, 19, 32)', whiteSpace: 'nowrap'}}>SL NO</th>
+                  <th style={{padding: '12px 8px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: 'clamp(0.75rem, 2vw, 0.9rem)', color: 'rgb(100, 19, 32)', whiteSpace: 'nowrap'}}>SCHOOL</th>
+                  <th style={{padding: '12px 8px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: 'clamp(0.75rem, 2vw, 0.9rem)', color: 'rgb(100, 19, 32)', whiteSpace: 'nowrap'}}>CLASS</th>
+                  <th style={{padding: '12px 8px', textAlign: 'center', fontWeight: '600', border: '1px solid #333', fontSize: 'clamp(0.75rem, 2vw, 0.9rem)', color: 'rgb(100, 19, 32)', whiteSpace: 'nowrap'}}>AFFILIATION NUMBER</th>
                 </tr>
               </thead>
               <tbody>
@@ -117,10 +125,10 @@ const AboutPage = () => {
                   {sl: 11, school: 'RANIGANJ', class: 'PlayGroup-XII', affiliation: '2430086'}
                 ].map((row, index) => (
                   <tr key={index}>
-                    <td style={{padding: '8px', textAlign: 'center', border: '1px solid #333', fontSize: '0.85rem'}}>{row.sl}</td>
-                    <td style={{padding: '8px', textAlign: 'center', fontWeight: '500', border: '1px solid #333', fontSize: '0.85rem'}}>{row.school}</td>
-                    <td style={{padding: '8px', textAlign: 'center', border: '1px solid #333', fontSize: '0.85rem'}}>{row.class}</td>
-                    <td style={{padding: '8px', textAlign: 'center', fontWeight: '600', color: 'rgb(100, 19, 32)', border: '1px solid #333', fontSize: '0.85rem'}}>{row.affiliation}</td>
+                    <td style={{padding: '10px 8px', textAlign: 'center', border: '1px solid #333', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)'}}>{row.sl}</td>
+                    <td style={{padding: '10px 8px', textAlign: 'center', fontWeight: '500', border: '1px solid #333', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap'}}>{row.school}</td>
+                    <td style={{padding: '10px 8px', textAlign: 'center', border: '1px solid #333', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap'}}>{row.class}</td>
+                    <td style={{padding: '10px 8px', textAlign: 'center', fontWeight: '600', color: 'rgb(100, 19, 32)', border: '1px solid #333', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)'}}>{row.affiliation}</td>
                   </tr>
                 ))}
               </tbody>
@@ -275,9 +283,28 @@ const AboutPage = () => {
             Techno India Group Public School (TIGPS) empowers students beyond academics and pays serious attention to the overall development of every student. Wide exposure is given to the students in performing arts, sports, and other co-curricular activities. Our prestigious CBSE schools in West Bengal offer mentorship by eminent personalities in various activities.
           </p>
           
-          <p style={{fontSize: '1rem', lineHeight: '1.7', color: '#333', marginBottom: '25px', fontFamily: 'Lora'}}>
-            These celebrity mentors include <strong style={{color: 'rgb(100, 19, 32)'}}>Samir Aich</strong> for Fine Arts, <strong style={{color: 'rgb(100, 19, 32)'}}>José Ramirez Barreto</strong> for Football coach, <strong style={{color: 'rgb(100, 19, 32)'}}>Sambaran Banerjee</strong> for Cricket mentorship, <strong style={{color: 'rgb(100, 19, 32)'}}>Dibyendu Barua</strong> for Chess, <strong style={{color: 'rgb(100, 19, 32)'}}>Bratati Bandopadhyay</strong> for Recitation and Elocution, <strong style={{color: 'rgb(100, 19, 32)'}}>Srabani Sen</strong> for Music, <strong style={{color: 'rgb(100, 19, 32)'}}>Dona Ganguly</strong> for Classical Dance, and <strong style={{color: 'rgb(100, 19, 32)'}}>Jogen Chowdhury</strong> for Fine Arts.
+          <p style={{fontSize: '1rem', lineHeight: '1.7', color: 'rgb(100, 19, 32)', fontWeight: '600' ,marginBottom: '40px', fontFamily: 'Lora'}}>
+            These celebrity mentors include Samir Aich for Fine Arts, José Ramirez Barreto for Football coach, Sambaran Banerjee for Cricket mentorship, Dibyendu Barua for Chess, Bratati Bandopadhyay for Recitation and Elocution, Srabani Sen for Music, Dona Ganguly for Classical Dance, and Jogen Chowdhury for Fine Arts.
           </p>
+          
+          <div className="row" style={{marginBottom: '40px'}}>
+            <div className="col-md-3 col-6 mb-4">
+              <img src="/pictures/mentors/sports.png" alt="Sports Mentorship" style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)'}}/>
+              <p style={{textAlign: 'center', marginTop: '10px', fontFamily: 'Lora', fontWeight: '600', color: 'rgb(100, 19, 32)'}}>Sports Training</p>
+            </div>
+            <div className="col-md-3 col-6 mb-4">
+              <img src="/pictures/mentors/music.png" alt="Music Mentorship" style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)'}}/>
+              <p style={{textAlign: 'center', marginTop: '10px', fontFamily: 'Lora', fontWeight: '600', color: 'rgb(100, 19, 32)'}}>Music Classes</p>
+            </div>
+            <div className="col-md-3 col-6 mb-4">
+              <img src="/pictures/mentors/dance.png" alt="Dance Mentorship" style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)'}}/>
+              <p style={{textAlign: 'center', marginTop: '10px', fontFamily: 'Lora', fontWeight: '600', color: 'rgb(100, 19, 32)'}}>Classical Dance</p>
+            </div>
+            <div className="col-md-3 col-6 mb-4">
+              <img src="/pictures/mentors/arts.png" alt="Fine Arts Mentorship" style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)'}}/>
+              <p style={{textAlign: 'center', marginTop: '10px', fontFamily: 'Lora', fontWeight: '600', color: 'rgb(100, 19, 32)'}}>Fine Arts</p>
+            </div>
+          </div>
           
           <p style={{fontSize: '1.1rem', lineHeight: '1.8', color: 'rgb(100, 19, 32)', fontWeight: '600', marginBottom: '25px', fontFamily: 'Lora', textAlign: 'center'}}>
             Unleash your child's potential with our great mentors at TIGPS!

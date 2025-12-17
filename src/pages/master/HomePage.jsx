@@ -11,7 +11,7 @@ import InternationalSection from '../../components/InternationalSection';
 function HomePage() {
   return (
     <>
-      <Hero />
+      <Hero carousel={true} />
       <AboutSection />
       <MissionSection />
       <LegacySection />

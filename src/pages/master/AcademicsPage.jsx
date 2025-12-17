@@ -56,6 +56,10 @@ const AcademicsPage = () => {
           <p style={{fontSize: '1.1rem', lineHeight: '1.8', fontFamily: 'Lora', fontWeight: '500', textAlign: 'center', background: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '10px'}}>
             By the end of the pre-primary program, children are well-equipped and ready for a smooth transition to kindergarten. They will have developed strong foundational skills in language, math, critical thinking, and social-emotional learning.
           </p>
+          
+          <div style={{textAlign: 'center', marginTop: '40px'}}>
+            <img src="/pictures/academics/pre-primary.webp" alt="Pre-Primary Learning" style={{maxWidth: '500px', width: '100%', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)'}} />
+          </div>
         </div>
       </section>
       
@@ -146,6 +150,10 @@ const AcademicsPage = () => {
               </div>
             </div>
           </div>
+          
+          <div style={{textAlign: 'center', marginTop: '40px'}}>
+            <img src="/pictures/academics/primary.webp" alt="Primary Education" style={{maxWidth: '500px', width: '100%', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)'}} />
+          </div>
         </div>
       </section>
       
@@ -158,56 +166,50 @@ const AcademicsPage = () => {
             At Techno India Group Public School (TIGPS), we understand that the middle and senior school years (Grades VI-X) are crucial for shaping a student's academic foundation and personal growth. Our dynamic learning environment fosters a love for learning, critical thinking, and well-rounded development.
           </p>
           
-          <div className="row" style={{marginBottom: '40px'}}>
-            <div className="col-md-6 mb-4">
-              <h3 style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '20px', fontFamily: 'Lora'}}>Middle School (Grades VI-VIII):</h3>
-              <div className="row">
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Curriculum Expansion</h4>
-                  </div>
-                </div>
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Interactive Learning</h4>
-                  </div>
-                </div>
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Developing Independence</h4>
-                  </div>
-                </div>
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Co-Curricular Activities</h4>
-                  </div>
-                </div>
+          <h3 style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '30px', fontFamily: 'Lora', textAlign: 'center'}}>Middle School (Grades VI-VIII)</h3>
+          <div className="row" style={{marginBottom: '50px'}}>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Curriculum Expansion</h4>
               </div>
             </div>
-            
-            <div className="col-md-6 mb-4">
-              <h3 style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '20px', fontFamily: 'Lora'}}>Senior School (Grades IX-X):</h3>
-              <div className="row">
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Board Exam Preparation</h4>
-                  </div>
-                </div>
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Focus on Life Skills</h4>
-                  </div>
-                </div>
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Holistic Development</h4>
-                  </div>
-                </div>
-                <div className="col-6 mb-3">
-                  <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Preparing for the Future</h4>
-                  </div>
-                </div>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Interactive Learning</h4>
+              </div>
+            </div>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Developing Independence</h4>
+              </div>
+            </div>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Co-Curricular Activities</h4>
+              </div>
+            </div>
+          </div>
+          
+          <h3 style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '30px', fontFamily: 'Lora', textAlign: 'center'}}>Senior School (Grades IX-X)</h3>
+          <div className="row" style={{marginBottom: '40px'}}>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Board Exam Preparation</h4>
+              </div>
+            </div>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Focus on Life Skills</h4>
+              </div>
+            </div>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Holistic Development</h4>
+              </div>
+            </div>
+            <div className="col-6 col-md-3 mb-3">
+              <div style={{background: 'rgba(255,255,255,0.1)', padding: '15px', borderRadius: '10px', textAlign: 'center', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <h4 style={{fontSize: '1rem', fontWeight: '600', marginBottom: '0', fontFamily: 'Lora'}}>Preparing for the Future</h4>
               </div>
             </div>
           </div>
@@ -215,6 +217,10 @@ const AcademicsPage = () => {
           <p style={{fontSize: '1.1rem', lineHeight: '1.8', fontFamily: 'Lora', textAlign: 'center', background: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '10px'}}>
             We at Techno India Group Public Schools (TIGPS) follow a curriculum specified by the Central Board of Secondary Education (CBSE) and formulated by the National Council for Education Research and Training (NCERT). Students are exposed to both scholastics and co-scholastics areas.
           </p>
+          
+          <div style={{textAlign: 'center', marginTop: '40px'}}>
+            <img src="/pictures/academics/senior.png" alt="Senior Section Learning" style={{maxWidth: '500px', width: '100%', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)'}} />
+          </div>
         </div>
       </section>
       
@@ -310,6 +316,10 @@ const AcademicsPage = () => {
               </div>
             </div>
           </div>
+          
+          <div style={{textAlign: 'center', marginTop: '40px'}}>
+            <img src="/pictures/academics/secondary.png" alt="Senior Secondary Education" style={{maxWidth: '500px', width: '100%', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)'}} />
+          </div>
         </div>
       </section>
       
@@ -348,6 +358,10 @@ const AcademicsPage = () => {
               </div>
             </div>
           </div>
+          
+          <div style={{textAlign: 'center', marginTop: '30px'}}>
+            <p style={{fontSize: '1.2rem', fontWeight: 'bold', color: 'rgb(100, 19, 32)', fontFamily: 'Lora', cursor: 'pointer'}}>Click here to open the Question Bank</p>
+          </div>
         </div>
       </section>
       
@@ -385,6 +399,10 @@ const AcademicsPage = () => {
                 <p style={{fontSize: '1rem', lineHeight: '1.6', fontFamily: 'Lora', textAlign: 'center', marginBottom: '0'}}>Customized learning paths based on individual student needs, learning styles, and academic goals</p>
               </div>
             </div>
+          </div>
+          
+          <div style={{textAlign: 'center', marginTop: '30px'}}>
+            <p style={{fontSize: '1.2rem', fontWeight: 'bold', color: 'white', fontFamily: 'Lora', cursor: 'pointer'}}>Click here to open the Techno AEP</p>
           </div>
         </div>
       </section>

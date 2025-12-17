@@ -1,33 +1,10 @@
 import React from 'react';
+import Hero from '../../components/Hero';
 
 const ContactPage = () => {
   return (
     <div className="contact-page">
-      {/* HERO SECTION */}
-      <section
-        className="hero-section"
-        style={{
-          background: 'rgb(100, 19, 32)',
-          color: 'white',
-          padding: '80px 20px'
-        }}
-      >
-        <div className="container">
-          <h1 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '20px' }}>
-            Contact Us
-          </h1>
-          <p
-            style={{
-              fontSize: '1.2rem',
-              textAlign: 'center',
-              maxWidth: '800px',
-              margin: '0 auto'
-            }}
-          >
-            Get in touch with us for admissions, inquiries, or any assistance
-          </p>
-        </div>
-      </section>
+      <Hero image="/pictures/image.jpg" alt="TIGPS Contact Us" />
 
       {/* CONTACT FORM SECTION */}
       <section style={{ padding: '80px 20px', background: 'white' }}>
