@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './FounderSection.css';
 
-const FounderSection = () => {
+const FounderSection = ({ schoolData }) => {
   const titleRef = useRef(null);
   const leftSectionRef = useRef(null);
   const centerSectionRef = useRef(null);

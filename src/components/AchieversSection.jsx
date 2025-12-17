@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './AchieversSection.css';
 
 const AchieversSection = () => {
-   const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
   const [slidesToShow, setSlidesToShow] = useState(4); // DESKTOP
   const sectionRef = useRef(null);
 

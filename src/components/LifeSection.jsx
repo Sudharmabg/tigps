@@ -67,7 +67,7 @@ const LifeSection = () => {
     slidesToShow: slidesToShow,  
     slidesToScroll: 1,
     autoplay: isVisible,
-    autoplaySpeed: 3200,
+    autoplaySpeed: 2000,
     cssEase: 'linear',
     pauseOnHover: true,
     centerMode: false,

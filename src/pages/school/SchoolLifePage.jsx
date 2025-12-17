@@ -1,55 +1,137 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from 'react-router-dom';
 import { getSchoolById } from '../../config/schoolsConfig';
+import LifeSection from '../../components/LifeSection';
 import PopularEvents from '../../components/PopularEvents';
+import AchieversSection from '../../components/AchieversSection';
 
 const SchoolLifePage = () => {
   const { schoolId } = useParams();
   const school = getSchoolById(schoolId);
+  
+  // Intersection observer for animations
+  const animatedRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    animatedRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   if (!school) {
     return <div className="container py-5"><h1>School not found</h1></div>;
   }
 
+  const sections = [
+    {
+      title: "Debate Club",
+      text: `At ${school.name}, emphasis is laid on the overall development of the body, mind and spirit. In the Debate Club, the students are taught to think logically and form a strong opinion about a particular topic. This practice strengthens their minds and helps them to improve their confidence, poise, and self-esteem. Students also develop higher-level thinking skills through application, analysis, synthesis, evaluation and creativity.`,
+      img: school.heroImage,
+      reverse: false,
+    },
+    {
+      title: "Chess Club",
+      text: `The Chess Club at ${school.name} has been an interesting part of the activities beyond academics. It is where the child is taught to analyse, plan strategies and devise tactics to discover the power of the mind game.`,
+      img: school.heroImage,
+      reverse: true,
+    },
+    {
+      title: "Self Defence Club",
+      text: `Self Defence is a counter-measure that involves defending the health and well-being of oneself from harm. The Self Defence Club at ${school.name} is designed generally for safety and protection of one's own self. Here, the students are taught different self-defence techniques such as karate and taekwondo.`,
+      img: school.heroImage,
+      reverse: false,
+    },
+    {
+      title: "Drama Club",
+      text: `The Drama Club/Theatre Club at ${school.name} adopts a different technique as it enhances the skills that lie within the children for theatre. The students are taught different terms such as ensemble (to form a circle in a group) along with various other techniques for following instructions such as the ethics and principles of the stage, the details of backstage, the front stage, to face the light, etc.`,
+      img: school.heroImage,
+      reverse: true,
+    },
+    {
+      title: "Quiz Club",
+      text: `${school.name} has a Quiz Club to make education more interesting, child-centric and activity-oriented. The aim of the quiz club is to encourage students to learn new things, generate interest among them regarding their syllabus and attract them towards education through innovative activities.`,
+      img: school.heroImage,
+      reverse: false,
+    },
+    {
+      title: "Science Club",
+      text: `The Science Club at ${school.name} aims to make science learning fun for young learners. All the experiments have been designed to allow students to explore and discover the most fundamental scientific concepts in areas directly relevant to their classroom instructions.`,
+      img: school.heroImage,
+      reverse: true,
+    },
+  ];
+
   return (
-    <div className="school-life-page">
-      <section className="hero-section" style={{background: 'rgb(100, 19, 32)', color: 'white', padding: '80px 20px'}}>
-        <div className="container">
-          <h1 style={{fontSize: '3rem', textAlign: 'center', marginBottom: '20px'}}>Life at {school.name}</h1>
-          <p style={{fontSize: '1.2rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto'}}>
-            Vibrant campus life and enriching experiences
-          </p>
-        </div>
+    <div>
+      {/* Hero Image Section */}
+      <section className="hero-image-section" style={{height: '60vh', overflow: 'hidden'}}>
+        <img 
+          src={school.heroImage} 
+          alt={`Life at ${school.name}`} 
+          style={{width: '100%', height: '100%', objectFit: 'cover'}}
+        />
       </section>
 
-      <section style={{padding: '80px 20px', background: 'white'}}>
-        <div className="container" style={{maxWidth: '1200px', margin: '0 auto'}}>
-          <div className="row">
-            <div className="col-md-6 mb-4">
-              <h3 style={{color: 'rgb(100, 19, 32)', marginBottom: '20px'}}>Student Activities</h3>
-              <p>Wide range of co-curricular activities including sports, arts, music, and cultural programs.</p>
+      <section className="hero-section rts-campus rts-section-padding py-5" style={{background: 'rgb(100, 19, 32)', color: 'white'}}>
+        <div className="container pb--20">
+          <h1 style={{fontSize: '3rem', textAlign: 'center', marginBottom: '20px'}}>Life at {school.name}</h1>
+          <p style={{fontSize: '1.2rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto', marginBottom: '20px'}}>
+            Experience vibrant campus life filled with learning, growth, and memorable moments at {school.location}
+          </p>
+          {sections.map((sec, index) => (
+            <div
+              key={index}
+              className={`row g-40 align-items-center mb-5 ${
+                sec.reverse ? "flex-row-reverse" : ""
+              }`}
+            >
+              <div className="col-lg-6">
+                <div
+                  ref={(el) => (animatedRefs.current[index * 2] = el)}
+                  className={`rts-left-section ${
+                    sec.reverse ? "fade-right" : "fade-left"
+                  }`}
+                >
+                  <h3 className="campus__life--single--title extra-curricular-title">
+                    {sec.title}
+                  </h3>
+                  <div className="left-section-content extra-curricular-text">
+                    <p>{sec.text}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div
+                  ref={(el) => (animatedRefs.current[index * 2 + 1] = el)}
+                  className={`rts-right-section rt-relative ${
+                    sec.reverse ? "fade-left" : "fade-right"
+                  }`}
+                >
+                  <div className="campus-video">
+                    <img src={sec.img} alt={sec.title} />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-md-6 mb-4">
-              <h3 style={{color: 'rgb(100, 19, 32)', marginBottom: '20px'}}>Events & Celebrations</h3>
-              <p>Regular festivals, competitions, and special events that bring the school community together.</p>
-            </div>
-            <div className="col-md-6 mb-4">
-              <h3 style={{color: 'rgb(100, 19, 32)', marginBottom: '20px'}}>Sports & Games</h3>
-              <p>Well-equipped sports facilities and regular participation in inter-school competitions.</p>
-            </div>
-            <div className="col-md-6 mb-4">
-              <h3 style={{color: 'rgb(100, 19, 32)', marginBottom: '20px'}}>Learning Environment</h3>
-              <p>Modern classrooms, laboratories, and library facilities that enhance the learning experience.</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-5">
-            <img src={school.heroImage} alt={`Life at ${school.name}`} style={{width: '100%', maxWidth: '800px', borderRadius: '10px'}} />
-          </div>
+          ))}
         </div>
       </section>
       
-      <PopularEvents schoolId={schoolId} />
+      <LifeSection schoolData={school} />
+      <PopularEvents schoolData={school} />
+      <AchieversSection schoolData={school} />
     </div>
   );
 };
