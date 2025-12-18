@@ -99,7 +99,6 @@ export const schoolsConfig = [
       { type: 'mission' },
       { type: 'legacy' },
       { type: 'founder' },
-      { type: 'campuses' },
       { type: 'international' }
     ],
     
@@ -151,7 +150,6 @@ export const schoolsConfig = [
       { type: 'mission' },
       { type: 'legacy' },
       { type: 'founder' },
-      { type: 'campuses' },
       { type: 'international' }
     ],
     
@@ -203,7 +201,6 @@ export const schoolsConfig = [
       { type: 'mission' },
       { type: 'legacy' },
       { type: 'founder' },
-      { type: 'campuses' },
       { type: 'international' }
     ],
     
@@ -255,7 +252,6 @@ export const schoolsConfig = [
       { type: 'mission' },
       { type: 'legacy' },
       { type: 'founder' },
-      { type: 'campuses' },
       { type: 'international' }
     ],
     
