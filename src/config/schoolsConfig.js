@@ -54,6 +54,186 @@ export const schoolsConfig = [
       { type: 'mentorship' },
       { type: 'founder' }
     ]
+  },
+  {
+    id: 'bolpur',
+    name: 'TIGPS - Bolpur',
+    location: 'Bolpur',
+    address: 'Bolpur, Birbhum, West Bengal Pin no: 731204',
+    contact: '(03463) 255123',
+    email: 'bolpur@tigps.in',
+    logo: '/pictures/logo.png',
+    heroImage: '/pictures/home/school/bolpur.webp',
+    description: 'Excellence in education in the cultural heart of Bengal',
+    
+    images: {
+      about: '/pictures/image.jpg',
+      mission: '/pictures/image.jpg',
+      legacy: '/pictures/image.jpg',
+      founder: '/pictures/image.jpg',
+      campuses: '/pictures/image.jpg',
+      international: '/pictures/image.jpg',
+      academics: '/pictures/image.jpg',
+      admissions: '/pictures/image.jpg',
+      life: '/pictures/image.jpg',
+      contact: '/pictures/image.jpg'
+    },
+    
+    homepage: [
+      { type: 'hero', props: { carousel: true } },
+      { type: 'about' },
+      { type: 'mission' },
+      { type: 'legacy' },
+      { type: 'founder' },
+      { type: 'campuses' },
+      { type: 'international' }
+    ],
+    
+    aboutPage: [
+      { type: 'aboutHero' },
+      { type: 'aboutContent' },
+      { type: 'missionVision' },
+      { type: 'affiliations' },
+      { type: 'awards' },
+      { type: 'societyPrograms' },
+      { type: 'mentorship' },
+      { type: 'founder' }
+    ]
+  },
+  {
+    id: 'coochbehar',
+    name: 'TIGPS - Coochbehar',
+    location: 'Coochbehar',
+    address: 'Coochbehar, West Bengal Pin no: 736101',
+    contact: '(03582) 228456',
+    email: 'coochbehar@tigps.in',
+    logo: '/pictures/logo.png',
+    heroImage: '/pictures/home/school/coochbehar.webp',
+    description: 'Excellence in education in the royal city',
+    
+    images: {
+      about: '/pictures/image.jpg',
+      mission: '/pictures/image.jpg',
+      legacy: '/pictures/image.jpg',
+      founder: '/pictures/image.jpg',
+      campuses: '/pictures/image.jpg',
+      international: '/pictures/image.jpg',
+      academics: '/pictures/image.jpg',
+      admissions: '/pictures/image.jpg',
+      life: '/pictures/image.jpg',
+      contact: '/pictures/image.jpg'
+    },
+    
+    homepage: [
+      { type: 'hero', props: { carousel: true } },
+      { type: 'about' },
+      { type: 'mission' },
+      { type: 'legacy' },
+      { type: 'founder' },
+      { type: 'campuses' },
+      { type: 'international' }
+    ],
+    
+    aboutPage: [
+      { type: 'aboutHero' },
+      { type: 'aboutContent' },
+      { type: 'missionVision' },
+      { type: 'affiliations' },
+      { type: 'awards' },
+      { type: 'societyPrograms' },
+      { type: 'mentorship' },
+      { type: 'founder' }
+    ]
+  },
+  {
+    id: 'durgapur',
+    name: 'TIGPS - Durgapur',
+    location: 'Durgapur',
+    address: 'Durgapur, Paschim Bardhaman, West Bengal Pin no: 713216',
+    contact: '(0343) 2548789',
+    email: 'durgapur@tigps.in',
+    logo: '/pictures/logo.png',
+    heroImage: '/pictures/home/school/durgapur.webp',
+    description: 'Excellence in education in the steel city',
+    
+    images: {
+      about: '/pictures/image.jpg',
+      mission: '/pictures/image.jpg',
+      legacy: '/pictures/image.jpg',
+      founder: '/pictures/image.jpg',
+      campuses: '/pictures/image.jpg',
+      international: '/pictures/image.jpg',
+      academics: '/pictures/image.jpg',
+      admissions: '/pictures/image.jpg',
+      life: '/pictures/image.jpg',
+      contact: '/pictures/image.jpg'
+    },
+    
+    homepage: [
+      { type: 'hero', props: { carousel: true } },
+      { type: 'about' },
+      { type: 'mission' },
+      { type: 'legacy' },
+      { type: 'founder' },
+      { type: 'campuses' },
+      { type: 'international' }
+    ],
+    
+    aboutPage: [
+      { type: 'aboutHero' },
+      { type: 'aboutContent' },
+      { type: 'missionVision' },
+      { type: 'affiliations' },
+      { type: 'awards' },
+      { type: 'societyPrograms' },
+      { type: 'mentorship' },
+      { type: 'founder' }
+    ]
+  },
+  {
+    id: 'falakata',
+    name: 'TIGPS - Falakata',
+    location: 'Falakata',
+    address: 'Falakata, Alipurduar, West Bengal Pin no: 735211',
+    contact: '(03563) 287654',
+    email: 'falakata@tigps.in',
+    logo: '/pictures/logo.png',
+    heroImage: '/pictures/home/school/falakata.webp',
+    description: 'Excellence in education in the gateway to Bhutan',
+    
+    images: {
+      about: '/pictures/image.jpg',
+      mission: '/pictures/image.jpg',
+      legacy: '/pictures/image.jpg',
+      founder: '/pictures/image.jpg',
+      campuses: '/pictures/image.jpg',
+      international: '/pictures/image.jpg',
+      academics: '/pictures/image.jpg',
+      admissions: '/pictures/image.jpg',
+      life: '/pictures/image.jpg',
+      contact: '/pictures/image.jpg'
+    },
+    
+    homepage: [
+      { type: 'hero', props: { carousel: true } },
+      { type: 'about' },
+      { type: 'mission' },
+      { type: 'legacy' },
+      { type: 'founder' },
+      { type: 'campuses' },
+      { type: 'international' }
+    ],
+    
+    aboutPage: [
+      { type: 'aboutHero' },
+      { type: 'aboutContent' },
+      { type: 'missionVision' },
+      { type: 'affiliations' },
+      { type: 'awards' },
+      { type: 'societyPrograms' },
+      { type: 'mentorship' },
+      { type: 'founder' }
+    ]
   }
 
 ];
