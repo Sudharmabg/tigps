@@ -50,17 +50,54 @@ export const schoolsConfig = [
       { type: 'international' }
     ],
     
-    // About page configuration - use master structure
-    aboutPage: [
-      { type: 'aboutHero' },
-      { type: 'aboutContent' },
-      { type: 'missionVision' },
-      { type: 'affiliations' },
-      { type: 'awards' },
-      { type: 'societyPrograms' },
-      { type: 'mentorship' },
-      { type: 'founder' }
-    ]
+    // Dynamic page configurations
+    pages: {
+      aboutPage: {
+        sections: [
+          { type: 'heroImage' },
+          { type: 'aboutContent' },
+          { type: 'missionVision' },
+          { type: 'affiliations' },
+          { type: 'awards' },
+          { type: 'societyPrograms' },
+          { type: 'mentorship' },
+          { type: 'founder' }
+        ]
+      },
+      academicsPage: {
+        sections: [
+          { type: 'academicsHero' },
+          { type: 'prePrimary', content: { title: 'Early Learning at Alipurduar' } },
+          { type: 'primary', content: { title: 'Primary Education Excellence' } },
+          { type: 'senior', content: { title: 'Secondary Education' } },
+          { type: 'seniorSecondary', content: { title: 'Senior Secondary Programs' } },
+          { type: 'questionBank' }
+        ]
+      },
+      admissionsPage: {
+        sections: [
+          { type: 'admissionsHero' },
+          { type: 'criteria', content: { title: 'Admission Criteria for TIGPS Alipurduar' } },
+          { type: 'procedure', content: { title: 'How to Apply' } },
+          { type: 'applicationForm' }
+        ]
+      },
+      lifePage: {
+        sections: [
+          { type: 'lifeHero' },
+          { type: 'clubActivities', content: { title: 'Student Life at Alipurduar' } },
+          { type: 'events' },
+          { type: 'achievers' }
+        ]
+      },
+      contactPage: {
+        sections: [
+          { type: 'contactHero' },
+          { type: 'contactInfo' },
+          { type: 'contactForm' }
+        ]
+      }
+    }
   },
   {
     id: 'bolpur',
@@ -100,17 +137,6 @@ export const schoolsConfig = [
       { type: 'legacy' },
       { type: 'founder' },
       { type: 'international' }
-    ],
-    
-    aboutPage: [
-      { type: 'aboutHero' },
-      { type: 'aboutContent' },
-      { type: 'missionVision' },
-      { type: 'affiliations' },
-      { type: 'awards' },
-      { type: 'societyPrograms' },
-      { type: 'mentorship' },
-      { type: 'founder' }
     ]
   },
   {
@@ -151,17 +177,6 @@ export const schoolsConfig = [
       { type: 'legacy' },
       { type: 'founder' },
       { type: 'international' }
-    ],
-    
-    aboutPage: [
-      { type: 'aboutHero' },
-      { type: 'aboutContent' },
-      { type: 'missionVision' },
-      { type: 'affiliations' },
-      { type: 'awards' },
-      { type: 'societyPrograms' },
-      { type: 'mentorship' },
-      { type: 'founder' }
     ]
   },
   {
@@ -202,17 +217,6 @@ export const schoolsConfig = [
       { type: 'legacy' },
       { type: 'founder' },
       { type: 'international' }
-    ],
-    
-    aboutPage: [
-      { type: 'aboutHero' },
-      { type: 'aboutContent' },
-      { type: 'missionVision' },
-      { type: 'affiliations' },
-      { type: 'awards' },
-      { type: 'societyPrograms' },
-      { type: 'mentorship' },
-      { type: 'founder' }
     ]
   },
   {
@@ -253,17 +257,6 @@ export const schoolsConfig = [
       { type: 'legacy' },
       { type: 'founder' },
       { type: 'international' }
-    ],
-    
-    aboutPage: [
-      { type: 'aboutHero' },
-      { type: 'aboutContent' },
-      { type: 'missionVision' },
-      { type: 'affiliations' },
-      { type: 'awards' },
-      { type: 'societyPrograms' },
-      { type: 'mentorship' },
-      { type: 'founder' }
     ]
   }
 
@@ -296,19 +289,139 @@ export const masterContent = {
   mission: {
     mission: 'To cultivate a nurturing and progressive learning environment...',
     vision: 'To be recognized as a premier chain of schools...'
+  },
+  
+  // Dynamic content for sections
+  missionVision: {
+    title: 'Mission & Vision',
+    introText: 'Welcome to Techno India Group Public Schools, where we believe in nurturing young minds to become the leaders of tomorrow.',
+    introImage: '/pictures/mission_vision/vission_mission.png',
+    mission: [
+      'To cultivate a nurturing and progressive learning environment that fosters intellectual curiosity, creativity, and critical thinking skills.',
+      'To equip students with a robust foundation in core subjects and prepare them for future academic endeavors.',
+      'To empower students to become responsible global citizens who are ethical, compassionate, and lifelong learners.'
+    ],
+    vision: [
+      'To be recognized as a premier chain of schools in West Bengal, renowned for academic excellence, innovative teaching methodologies, and holistic student development.',
+      'To nurture future generations of leaders who are equipped with the knowledge, skills, and values to thrive in the ever-evolving global landscape.'
+    ]
+  },
+  
+  affiliations: {
+    title: 'Affiliations and Certifications',
+    paragraphs: [
+      'Techno India Group Public Schools are proud affiliates of the Central Board of Secondary Education (CBSE), renowned for delivering high-quality education in line with national standards.',
+      'Our schools rigorously follow the CBSE curriculum, meticulously developed by the National Council for Education Research and Training (NCERT).'
+    ],
+    table: {
+      headers: ['SL NO', 'SCHOOL', 'CLASS', 'AFFILIATION NUMBER'],
+      rows: [
+        ['1', 'SILIGURI', 'PlayGroup-XII', '2430126'],
+        ['2', 'JALPAIGURI', 'PlayGroup-XII', '2430238'],
+        ['3', 'ALIPURDUAR', 'PlayGroup-XI', '2430299'],
+        ['4', 'FALAKATA', 'PlayGroup-X', '2430402'],
+        ['5', 'COOCHBEHAR', 'PlayGroup-XII', '2430158']
+      ]
+    }
+  },
+  
+  awards: {
+    title: 'Accolades & Awards',
+    sections: [
+      {
+        title: 'Meritorious Scholarships',
+        description: 'We believe in nurturing brilliance. These scholarships cover full or partial tuition fees.'
+      },
+      {
+        title: 'Sports Achievements',
+        description: 'Our athletes shine on the field, earning medals and trophies in various tournaments.'
+      }
+    ],
+    image: 'https://tigps.in/assets/images/section_image/awards.webp'
+  },
+  
+  mentorship: {
+    title: 'Mentorship',
+    quote: 'The beautiful thing about learning is that no one can take it away from you.',
+    paragraphs: [
+      'Our mentors in Techno India Group Public Schools are highly experienced experts in their fields.',
+      'TIGPS empowers students beyond academics with wide exposure in performing arts, sports, and co-curricular activities.'
+    ],
+    mentors: [
+      { image: '/pictures/mentors/sports.png', alt: 'Sports Mentorship', title: 'Sports Training' },
+      { image: '/pictures/mentors/music.png', alt: 'Music Mentorship', title: 'Music Classes' },
+      { image: '/pictures/mentors/dance.png', alt: 'Dance Mentorship', title: 'Classical Dance' },
+      { image: '/pictures/mentors/arts.png', alt: 'Fine Arts Mentorship', title: 'Fine Arts' }
+    ]
   }
 };
 
-// Default homepage section configuration
-export const defaultHomepage = [
-  { type: 'hero', props: { carousel: true } },
-  { type: 'about' },
-  { type: 'mission' },
-  { type: 'legacy' },
-  { type: 'founder' },
-  { type: 'campuses' },
-  { type: 'international' }
-];
+// Default page configurations
+export const defaultPages = {
+  homepage: {
+    sections: [
+      { type: 'hero', props: { carousel: true } },
+      { type: 'about' },
+      { type: 'mission' },
+      { type: 'legacy' },
+      { type: 'founder' },
+      { type: 'campuses' },
+      { type: 'international' }
+    ]
+  },
+  
+  aboutPage: {
+    sections: [
+      { type: 'heroImage' },
+      { type: 'aboutContent' },
+      { type: 'missionVision' },
+      { type: 'affiliations' },
+      { type: 'awards' },
+      { type: 'societyPrograms' },
+      { type: 'mentorship' },
+      { type: 'founder' }
+    ]
+  },
+  
+  academicsPage: {
+    sections: [
+      { type: 'heroImage' },
+      { type: 'customSection', content: { title: 'Academic Excellence' } },
+      { type: 'customSection', content: { title: 'Pre-Primary Education' } },
+      { type: 'customSection', content: { title: 'Primary Education' } },
+      { type: 'customSection', content: { title: 'Secondary Education' } },
+      { type: 'customSection', content: { title: 'Senior Secondary' } }
+    ]
+  },
+  
+  admissionsPage: {
+    sections: [
+      { type: 'heroImage' },
+      { type: 'customSection', content: { title: 'Admission Process' } },
+      { type: 'customSection', content: { title: 'Eligibility Criteria' } },
+      { type: 'customSection', content: { title: 'Application Procedure' } }
+    ]
+  },
+  
+  lifePage: {
+    sections: [
+      { type: 'heroImage' },
+      { type: 'life' },
+      { type: 'events' },
+      { type: 'achievers' }
+    ]
+  },
+  
+  contactPage: {
+    sections: [
+      { type: 'heroImage' },
+      { type: 'customSection', content: { title: 'Contact Information' } }
+    ]
+  }
+};
+
+// Default homepage section configuration (for backward compatibility)
+export const defaultHomepage = defaultPages.homepage.sections;
 
 // Default sections configuration
 export const defaultSections = {
@@ -358,8 +471,20 @@ export const getSchoolById = (id) => {
     sections: { ...defaultSections, ...school.sections },
     content: { ...masterContent, ...school.content },
     images: { ...masterImages, ...school.images },
-    homepage: school.homepage || defaultHomepage
+    homepage: school.homepage || defaultHomepage,
+    pages: {
+      ...defaultPages,
+      ...school.pages
+    }
   };
+};
+
+// Get page configuration for a school
+export const getSchoolPage = (schoolId, pageName) => {
+  const school = getSchoolById(schoolId);
+  if (!school) return null;
+  
+  return school.pages?.[pageName] || defaultPages[pageName];
 };
 
 export const getAllSchools = () => {
