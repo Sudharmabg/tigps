@@ -37,14 +37,16 @@ const EventDetail = () => {
           <div className="event-content">
             <div className="event-header">
               <h1 className="event-title">{event.title}</h1>
-              <p className="event-date">{event.date}</p>
+               {event.date?.trim() && (
+                <p className="event-date">{event.date}</p>
+              )}
             </div>
 
             <div className="event-description">
               <p>{event.fullDescription}</p>
             </div>
 
-            {event.highlights && (
+            {event.highlights && event.highlights.length > 0 && (
               <div className="event-highlights">
                 <h3>Event Highlights</h3>
                 <ul>
