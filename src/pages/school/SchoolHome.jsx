@@ -1,13 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { getSchoolById } from '../../config/schoolsConfig';
-import Hero from '../../components/Hero';
-import AboutSection from '../../components/AboutSection';
-import MissionSection from '../../components/MissionSection';
-import LegacySection from '../../components/LegacySection';
-import FounderSection from '../../components/FounderSection';
-import CampusesSection from '../../components/CampusesSection';
-import InternationalSection from '../../components/InternationalSection';
+import { renderSection } from '../../components/SectionRegistry';
 
 function SchoolHome() {
   const { schoolId } = useParams();
@@ -19,13 +13,9 @@ function SchoolHome() {
 
   return (
     <>
-      <Hero image={school.heroImage} alt={school.name} schoolData={school} />
-      <AboutSection schoolData={school} />
-      <MissionSection schoolData={school} />
-      <LegacySection schoolData={school} />
-      <FounderSection schoolData={school} />
-      <CampusesSection schoolData={school} />
-      <InternationalSection schoolData={school} />
+      {school.homepage.map((sectionConfig, index) => 
+        renderSection(sectionConfig, school, index)
+      )}
     </>
   );
 }

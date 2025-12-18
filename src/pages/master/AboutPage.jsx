@@ -1,16 +1,17 @@
 import React from 'react';
+import { getImageForSection } from '../../config/schoolsConfig';
 import MissionSection from '../../components/MissionSection';
 import FounderSection from '../../components/FounderSection';
 import LegacySection from '../../components/LegacySection';
 
-const AboutPage = () => {
+const AboutPage = ({ schoolData }) => {
   return (
     <div>
       {/* Hero Image Section */}
       <section className="hero-image-section" style={{height: '60vh', overflow: 'hidden'}}>
         <img 
-          src="/pictures/image.jpg" 
-          alt="TIGPS Campus" 
+          src={getImageForSection(schoolData, 'about', '/pictures/image.jpg')} 
+          alt={schoolData ? `${schoolData.name} Campus` : 'TIGPS Campus'} 
           style={{width: '100%', height: '100%', objectFit: 'cover'}}
         />
       </section>
@@ -20,12 +21,18 @@ const AboutPage = () => {
         <div style={{maxWidth: '1200px', margin: '0 auto'}}>
           <div className="row align-items-center">
             <div className="col-lg-8">
-              <h1 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '30px', fontFamily: 'Lora'}}>TECHNO INDIA GROUP PUBLIC SCHOOL</h1>
+              <h1 style={{fontSize: '2.5rem', fontWeight: '700', marginBottom: '30px', fontFamily: 'Lora'}}>{schoolData ? schoolData.name.toUpperCase() : 'TECHNO INDIA GROUP PUBLIC SCHOOL'}</h1>
               <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '20px', fontFamily: 'Lora'}}>
-                Welcome to Techno India Group Public Schools, where education meets excellence. As a premier chain of schools under the Techno India Group, we are dedicated to nurturing young minds with a holistic approach to learning. Our curriculum blends academic rigor with co-curricular activities, ensuring students excel not only in examinations but also in sports, arts, and community engagement.
+                {schoolData ? 
+                  `Welcome to ${schoolData.name}, where education meets excellence in ${schoolData.location}. As part of the prestigious Techno India Group, we are dedicated to nurturing young minds with a holistic approach to learning. Our curriculum blends academic rigor with co-curricular activities, ensuring students excel not only in examinations but also in sports, arts, and community engagement.` :
+                  'Welcome to Techno India Group Public Schools, where education meets excellence. As a premier chain of schools under the Techno India Group, we are dedicated to nurturing young minds with a holistic approach to learning. Our curriculum blends academic rigor with co-curricular activities, ensuring students excel not only in examinations but also in sports, arts, and community engagement.'
+                }
               </p>
               <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '20px', fontFamily: 'Lora'}}>
-                At Techno India Group Public Schools, we believe in fostering a supportive environment that encourages curiosity, creativity, and critical thinking. Our state-of-the-art facilities and qualified faculties ensure that every student receives personalized attention to reach their fullest potential.
+                {schoolData ? 
+                  `At ${schoolData.name}, we believe in fostering a supportive environment that encourages curiosity, creativity, and critical thinking. Our state-of-the-art facilities and qualified faculties ensure that every student receives personalized attention to reach their fullest potential.` :
+                  'At Techno India Group Public Schools, we believe in fostering a supportive environment that encourages curiosity, creativity, and critical thinking. Our state-of-the-art facilities and qualified faculties ensure that every student receives personalized attention to reach their fullest potential.'
+                }
               </p>
               <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '0', fontFamily: 'Lora'}}>
                 Join us to experience education that goes beyond the textbooks, preparing students for a successful future in an ever-evolving world. Explore our wide range of extracurricular programs, competitive exam preparation, and a commitment to overall student development. Discover the Techno India Group Public Schools difference today.
@@ -33,8 +40,8 @@ const AboutPage = () => {
             </div>
             <div className="col-lg-4">
               <img 
-                src="/pictures/image.jpg" 
-                alt="TIGPS Students" 
+                src={getImageForSection(schoolData, 'about', '/pictures/image.jpg')} 
+                alt={schoolData ? `${schoolData.name} Students` : 'TIGPS Students'} 
                 style={{width: '100%', borderRadius: '10px', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.3)'}}
               />
             </div>
@@ -316,7 +323,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <FounderSection />
+      <FounderSection schoolData={schoolData} />
     </div>
   );
 };

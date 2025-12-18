@@ -1,10 +1,11 @@
 import React from 'react';
+import { getImageForSection } from '../../config/schoolsConfig';
 import Hero from '../../components/Hero';
 
-const AdmissionsPage = () => {
+const AdmissionsPage = ({ schoolData }) => {
   return (
     <div className="admissions-page">
-      <Hero image="/pictures/image.jpg" alt="TIGPS Admissions" />
+      <Hero image={getImageForSection(schoolData, 'admissions', '/pictures/image.jpg')} alt={schoolData ? `${schoolData.name} Admissions` : 'TIGPS Admissions'} />
       
       {/* Criteria Section */}
       <section style={{padding: '40px 20px', background: 'white'}}>

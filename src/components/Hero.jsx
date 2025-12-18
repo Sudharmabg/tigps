@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getImageForSection } from '../config/schoolsConfig';
 
 function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', schoolData }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -79,7 +80,7 @@ function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', s
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src={schoolData ? schoolData.heroImage : image} alt={schoolData ? schoolData.name : alt} />
+        <img src={getImageForSection(schoolData, 'hero', image)} alt={schoolData ? schoolData.name : alt} />
       </div>
     </section>
   );

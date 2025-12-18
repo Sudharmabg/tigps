@@ -13,9 +13,10 @@ const SchoolContactPage = () => {
 
   return (
     <div className="contact-page">
-      <Hero image={school.heroImage} alt={`Contact ${school.name}`} />
+      {school.sections.contactHero && <Hero image={school.heroImage} alt={`Contact ${school.name}`} />}
 
       {/* CONTACT FORM SECTION */}
+      {school.sections.contactForm && (
       <section style={{ padding: '80px 20px', background: 'white' }}>
         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div className="row">
@@ -82,6 +83,7 @@ const SchoolContactPage = () => {
             </div>
 
             {/* CONTACT INFO RIGHT SIDE */}
+            {school.sections.contactInfo && (
             <div className="col-md-4">
               <div style={{ background: '#f8f9fa', padding: '30px', borderRadius: '10px' }}>
                 <h3 style={{ color: 'rgb(100, 19, 32)', marginBottom: '20px' }}>
@@ -108,12 +110,13 @@ const SchoolContactPage = () => {
                 <div>
                   <h5 style={{ color: 'rgb(100, 19, 32)' }}>Office Hours</h5>
                   <p>
-                    Monday - Friday: 8:00 AM - 4:00 PM<br />
-                    Saturday: 8:00 AM - 12:00 PM
+                    {school.content?.contact?.officeHours || 
+                    'Monday - Friday: 8:00 AM - 4:00 PM\nSaturday: 8:00 AM - 12:00 PM'}
                   </p>
                 </div>
               </div>
             </div>
+            )}
 
             {/* GOOGLE MAP SECTION */}
             <div className="col-md-12 mt-5">
@@ -131,6 +134,7 @@ const SchoolContactPage = () => {
           </div>
         </div>
       </section>
+      )}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const MissionSection = ({ schoolData }) => {
       <div className="mission-container">
         <div className="mission-left">
           <img
-            src="pictures/home/mssn_vission.png"
+            src="/pictures/home/mssn_vission.png"
             alt="TIGPS Campus"
             className="mission-image"
           />
