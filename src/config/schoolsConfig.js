@@ -19,6 +19,13 @@ export const schoolsConfig = [
       }
     },
     
+    // School-specific carousel images
+    carouselImages: [
+      '/pictures/hero_section/alipurduar/banner-1.webp',
+      '/pictures/hero_section/alipurduar/banner-2.webp',
+      '/pictures/hero_section/alipurduar/banner-3.webp'
+    ],
+    
     // Section-specific images (hero uses master carousel, others use school image)
     images: {
       about: '/pictures/image.jpg',
@@ -66,6 +73,13 @@ export const schoolsConfig = [
     heroImage: '/pictures/home/school/bolpur.webp',
     description: 'Excellence in education in the cultural heart of Bengal',
     
+    // School-specific carousel images
+    carouselImages: [
+      '/pictures/hero_section/bolpur/banner-1.webp',
+      '/pictures/hero_section/bolpur/banner-2.webp',
+      '/pictures/hero_section/bolpur/banner-3.webp'
+    ],
+    
     images: {
       about: '/pictures/image.jpg',
       mission: '/pictures/image.jpg',
@@ -110,6 +124,13 @@ export const schoolsConfig = [
     logo: '/pictures/logo.png',
     heroImage: '/pictures/home/school/coochbehar.webp',
     description: 'Excellence in education in the royal city',
+    
+    // School-specific carousel images
+    carouselImages: [
+      '/pictures/hero_section/coochbehar/banner-1.webp',
+      '/pictures/hero_section/coochbehar/banner-2.webp',
+      '/pictures/hero_section/coochbehar/banner-3.webp'
+    ],
     
     images: {
       about: '/pictures/image.jpg',
@@ -156,6 +177,13 @@ export const schoolsConfig = [
     heroImage: '/pictures/home/school/durgapur.webp',
     description: 'Excellence in education in the steel city',
     
+    // School-specific carousel images
+    carouselImages: [
+      '/pictures/hero_section/durgapur/banner-1.webp',
+      '/pictures/hero_section/durgapur/banner-2.webp',
+      '/pictures/hero_section/durgapur/banner-3.webp'
+    ],
+    
     images: {
       about: '/pictures/image.jpg',
       mission: '/pictures/image.jpg',
@@ -200,6 +228,13 @@ export const schoolsConfig = [
     logo: '/pictures/logo.png',
     heroImage: '/pictures/home/school/falakata.webp',
     description: 'Excellence in education in the gateway to Bhutan',
+    
+    // School-specific carousel images
+    carouselImages: [
+      '/pictures/hero_section/falakata/banner-1.webp',
+      '/pictures/hero_section/falakata/banner-2.webp',
+      '/pictures/hero_section/falakata/banner-3.webp'
+    ],
     
     images: {
       about: '/pictures/image.jpg',

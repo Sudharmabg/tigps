@@ -4,7 +4,9 @@ import { getImageForSection } from '../config/schoolsConfig';
 function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', schoolData }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const banners = [
+  
+  // Use school-specific carousel images or master carousel
+  const banners = schoolData?.carouselImages || [
     '/pictures/hero_section/banner-tigps-1.webp',
     '/pictures/hero_section/banner-tigps-2.png',
     '/pictures/hero_section/banner-tigps-3.png'

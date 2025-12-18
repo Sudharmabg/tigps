@@ -189,9 +189,13 @@ Each school inherits ALL master sections by default. Only specify what's differe
 ## Adding a New School - Complete Guide
 
 ### Step 1: Prepare School Assets
-1. **Add school images** to `/public/pictures/home/school/[school-id].webp`
-2. **Ensure image paths** use leading slash (`/pictures/...`)
-3. **Optimize images** for web (WebP format recommended)
+1. **Add school hero image** to `/public/pictures/home/school/[school-id].webp`
+2. **Add carousel images** to `/public/pictures/hero_section/[school-id]/`:
+   - `banner-1.webp`
+   - `banner-2.webp` 
+   - `banner-3.webp`
+3. **Ensure image paths** use leading slash (`/pictures/...`)
+4. **Optimize images** for web (WebP format recommended)
 
 ### Step 2: Add School Configuration
 
@@ -209,6 +213,13 @@ Open `src/config/schoolsConfig.js` and add new school to the `schoolsConfig` arr
   logo: '/pictures/logo.png',          // School logo (usually same for all)
   heroImage: '/pictures/home/school/new-school.webp', // School-specific hero image
   description: 'Excellence in education at New Location', // Brief description
+  
+  // OPTIONAL: School-specific carousel images (uses master carousel if not specified)
+  carouselImages: [
+    '/pictures/hero_section/new-school/banner-1.webp',
+    '/pictures/hero_section/new-school/banner-2.webp',
+    '/pictures/hero_section/new-school/banner-3.webp'
+  ],
   
   // REQUIRED: Section Images (uses master images by default)
   images: {
@@ -356,7 +367,7 @@ Different sections use different image properties:
 
 | Section | Image Usage | How to Change |
 |---------|-------------|---------------|
-| **Homepage Hero** | Uses carousel images | Modify `Hero.jsx` banners array |
+| **Homepage Hero Carousel** | Uses `carouselImages` array | Update school's `carouselImages` |
 | **About Page Hero** | Uses `images.about` | Update school's `images.about` |
 | **Academics Hero** | Uses `images.academics` | Update school's `images.academics` |
 | **Mission Section** | Fixed image | Update `MissionSection.jsx` src |
@@ -388,11 +399,29 @@ Different sections use different image properties:
 />
 ```
 
+**Change Homepage Carousel for One School:**
+```javascript
+{
+  id: 'alipurduar',
+  // ... other config
+  carouselImages: [
+    '/pictures/hero_section/alipurduar/banner-1.webp',
+    '/pictures/hero_section/alipurduar/banner-2.webp',
+    '/pictures/hero_section/alipurduar/banner-3.webp'
+  ]
+}
+```
+
 **Change Multiple Images for One School:**
 ```javascript
 {
   id: 'alipurduar',
   // ... other config
+  carouselImages: [
+    '/pictures/hero_section/alipurduar/banner-1.webp',
+    '/pictures/hero_section/alipurduar/banner-2.webp',
+    '/pictures/hero_section/alipurduar/banner-3.webp'
+  ],
   images: {
     about: '/pictures/alipurduar-about.jpg',
     academics: '/pictures/alipurduar-academics.jpg',
@@ -577,6 +606,8 @@ export const eventsData = [
 ✅ **Homepage Customization** - Flexible section ordering and removal
 ✅ **Content Override** - School-specific content replaces master content
 ✅ **Automatic Page Generation** - All school pages work without additional setup
+✅ **School-Specific Carousels** - Each school can have unique homepage carousel images
+✅ **Carousel Fallback** - Uses master carousel if school images not provided
 
 ## Development
 
