@@ -16,7 +16,9 @@ const CampusesSection = () => {
     { id: 'durgapur', name: 'TIGPS Durgapur', location: 'Durgapur', heroImage: '/pictures/image.jpg' },
     { id: 'falakata', name: 'TIGPS Falakata', location: 'Falakata', heroImage: '/pictures/image.jpg' },
     { id: 'gangarampur', name:'TIGPS Gangarampur', location:'Gangarampur',heroImage:'/pictures/image.jpg'},
-    { id: 'hoogly', name: 'TIGPS Hoogly', location: 'Hoogly', heroImage: '/pictures/image.jpg' }
+    { id: 'hoogly', name: 'TIGPS Hoogly', location: 'Hoogly', heroImage: '/pictures/image.jpg' },
+    { id: 'jalpaiguri', name: 'TIGPS Jalpaiguri', location: 'Jalpaiguri', heroImage: '/pictures/image.jpg' },
+    { id: 'kolaghat', name: 'TIGPS Kolaghat', location: 'Kolaghat', heroImage: '/pictures/image.jpg' },
   ];
 
   useEffect(() => {

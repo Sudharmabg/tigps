@@ -59,6 +59,20 @@ import HooglyAdmissionsPage from './pages/school/HooglyAdmissionsPage';
 import HooglyLifePage from './pages/school/HooglyLifePage';
 import HooglyContactPage from './pages/school/HooglyContactPage';
 
+import JalpaiguriHomePage from './pages/school/JalpaiguriHomePage';
+import JalpaiguriAboutPage from './pages/school/JalpaiguriAboutPage';
+import JalpaiguriAcademicsPage from './pages/school/JalpaiguriAcademicsPage';
+import JalpaiguriAdmissionsPage from './pages/school/JalpaiguriAdmissionsPage';
+import JalpaiguriLifePage from './pages/school/JalpaiguriLifePage';
+import JalpaiguriContactPage from './pages/school/JalpaiguriContactPage';
+
+import KolaghatHomePage from './pages/school/KolaghatHomePage'
+import KolaghatAboutPage from './pages/school/KolaghatAboutPage'
+import KolaghatAcademicsPage from './pages/school/KolaghatAcademicsPage'
+import KolaghatAdmissionsPage from './pages/school/KolaghatAdmissionsPage'
+import KolaghatLifePage from './pages/school/KolaghatLifePage'
+import KolaghatContactPage from './pages/school/KolaghatContactPage'
+
 import './App.css';
 
 
@@ -126,6 +140,20 @@ function App() {
           <Route path="/schools/hoogly/admissions" element={<Layout><HooglyAdmissionsPage /></Layout>} />
           <Route path="/schools/hoogly/life-at-tigps" element={<Layout><HooglyLifePage /></Layout>} />
           <Route path="/schools/hoogly/contact" element={<Layout><HooglyContactPage /></Layout>} />
+
+          <Route path="/schools/jalpaiguri" element={<Layout><JalpaiguriHomePage /></Layout>} />
+          <Route path="/schools/jalpaiguri/about" element={<Layout><JalpaiguriAboutPage /></Layout>} />
+          <Route path="/schools/jalpaiguri/academics" element={<Layout><JalpaiguriAcademicsPage /></Layout>} />
+          <Route path="/schools/jalpaiguri/admissions" element={<Layout><JalpaiguriAdmissionsPage /></Layout>} />
+          <Route path="/schools/jalpaiguri/life-at-tigps" element={<Layout><JalpaiguriLifePage /></Layout>} />
+          <Route path="/schools/jalpaiguri/contact" element={<Layout><JalpaiguriContactPage /></Layout>} />
+
+          <Route path="/schools/kolaghat" element={<Layout><KolaghatHomePage /></Layout>} />
+          <Route path="/schools/kolaghat/about" element={<Layout><KolaghatAboutPage /></Layout>} />
+          <Route path="/schools/kolaghat/academics" element={<Layout><KolaghatAcademicsPage /></Layout>} />
+          <Route path="/schools/kolaghat/admissions" element={<Layout><KolaghatAdmissionsPage /></Layout>} />
+          <Route path="/schools/kolaghat/life-at-tigps" element={<Layout><KolaghatLifePage /></Layout>} />
+          <Route path="/schools/kolaghat/contact" element={<Layout><KolaghatContactPage /></Layout>} />
           
         </Routes>
       </div>

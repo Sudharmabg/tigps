@@ -30,6 +30,12 @@ function Layout({ children }) {
   if (location.pathname.startsWith('/schools/hoogly')) {
     finalSchoolId = 'hoogly';
   }
+  if (location.pathname.startsWith('/schools/jalpaiguri')) {
+    finalSchoolId = 'jalpaiguri';
+  }
+  if (location.pathname.startsWith('/schools/kolaghat')) {
+    finalSchoolId = 'kolaghat';
+  }
 
   return (
     <>
