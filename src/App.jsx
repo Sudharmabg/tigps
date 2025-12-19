@@ -45,6 +45,20 @@ import FalakataAdmissionsPage from './pages/school/FalakataAdmissionsPage';
 import FalakataLifePage from './pages/school/FalakataLifePage';
 import FalakataContactPage from './pages/school/FalakataContactPage';
 
+import GangarampurHomePage from './pages/school/GangarampurHomePage';
+import GangarampurAboutPage from './pages/school/GangarampurAboutPage';
+import GangarampurAcademicsPage from './pages/school/GangarampurAcademicsPage';
+import GangarampurAdmissionsPage from './pages/school/GangarampurAdmissionsPage';
+import GangarampurLifePage from './pages/school/GangarampurLifePage';
+import GangarampurContactPage from './pages/school/GangarampurContactPage';
+
+import HooglyHomePage from './pages/school/ HooglyHomePage';
+import HooglyAboutPage from './pages/school/ HooglyAboutPage';
+import HooglyAcademicsPage from './pages/school/HooglyAcademicsPage';
+import HooglyAdmissionsPage from './pages/school/HooglyAdmissionsPage';
+import HooglyLifePage from './pages/school/HooglyLifePage';
+import HooglyContactPage from './pages/school/HooglyContactPage';
+
 import './App.css';
 
 
@@ -98,8 +112,21 @@ function App() {
           <Route path="/schools/falakata/admissions" element={<Layout><FalakataAdmissionsPage /></Layout>} />
           <Route path="/schools/falakata/life-at-tigps" element={<Layout><FalakataLifePage /></Layout>} />
           <Route path="/schools/falakata/contact" element={<Layout><FalakataContactPage /></Layout>} />
-          
 
+          <Route path="/schools/gangarampur" element={<Layout>< GangarampurHomePage /></Layout>} />
+          <Route path="/schools/gangarampur/about" element={<Layout><GangarampurAboutPage /></Layout>} />
+          <Route path="/schools/gangarampur/academics" element={<Layout><GangarampurAcademicsPage /></Layout>} />
+          <Route path="/schools/gangarampur/admissions" element={<Layout><GangarampurAdmissionsPage /></Layout>} />
+          <Route path="/schools/gangarampur/life-at-tigps" element={<Layout><GangarampurLifePage/></Layout>} />
+          <Route path="/schools/gangarampur/contact" element={<Layout><GangarampurContactPage /></Layout>} />          
+
+          <Route path="/schools/hoogly" element={<Layout><HooglyHomePage /></Layout>} />
+          <Route path="/schools/hoogly/about" element={<Layout><HooglyAboutPage /></Layout>} />
+          <Route path="/schools/hoogly/academics" element={<Layout><HooglyAcademicsPage /></Layout>} />
+          <Route path="/schools/hoogly/admissions" element={<Layout><HooglyAdmissionsPage /></Layout>} />
+          <Route path="/schools/hoogly/life-at-tigps" element={<Layout><HooglyLifePage /></Layout>} />
+          <Route path="/schools/hoogly/contact" element={<Layout><HooglyContactPage /></Layout>} />
+          
         </Routes>
       </div>
     </Router>
