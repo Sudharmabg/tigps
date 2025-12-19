@@ -52,8 +52,8 @@ import GangarampurAdmissionsPage from './pages/school/GangarampurAdmissionsPage'
 import GangarampurLifePage from './pages/school/GangarampurLifePage';
 import GangarampurContactPage from './pages/school/GangarampurContactPage';
 
-import HooglyHomePage from './pages/school/ HooglyHomePage';
-import HooglyAboutPage from './pages/school/ HooglyAboutPage';
+import HooglyHomePage from './pages/school/HooglyHomePage';
+import HooglyAboutPage from './pages/school/HooglyAboutPage';
 import HooglyAcademicsPage from './pages/school/HooglyAcademicsPage';
 import HooglyAdmissionsPage from './pages/school/HooglyAdmissionsPage';
 import HooglyLifePage from './pages/school/HooglyLifePage';
