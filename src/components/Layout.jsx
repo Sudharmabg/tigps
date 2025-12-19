@@ -36,6 +36,9 @@ function Layout({ children }) {
   if (location.pathname.startsWith('/schools/kolaghat')) {
     finalSchoolId = 'kolaghat';
   }
+  if (location.pathname.startsWith('/schools/krishnanagar')) {
+    finalSchoolId = 'krishnanagar';
+  }
 
   return (
     <>

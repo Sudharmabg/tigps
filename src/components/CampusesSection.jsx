@@ -19,6 +19,7 @@ const CampusesSection = () => {
     { id: 'hoogly', name: 'TIGPS Hoogly', location: 'Hoogly', heroImage: '/pictures/image.jpg' },
     { id: 'jalpaiguri', name: 'TIGPS Jalpaiguri', location: 'Jalpaiguri', heroImage: '/pictures/image.jpg' },
     { id: 'kolaghat', name: 'TIGPS Kolaghat', location: 'Kolaghat', heroImage: '/pictures/image.jpg' },
+    { id: 'krishnanagar', name: 'TIGPS Krishnanagar', location: 'Krishnanagar', heroImage: '/pictures/image.jpg' }
   ];
 
   useEffect(() => {

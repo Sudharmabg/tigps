@@ -73,6 +73,13 @@ import KolaghatAdmissionsPage from './pages/school/KolaghatAdmissionsPage'
 import KolaghatLifePage from './pages/school/KolaghatLifePage'
 import KolaghatContactPage from './pages/school/KolaghatContactPage'
 
+import KrishnanagarHomePage from './pages/school/KrishnanagarHomePage';
+import KrishnanagarAboutPage from './pages/school/KrishnanagarAboutPage';
+import KrishnanagarAcademicsPage from './pages/school/KrishnanagarAcademicsPage';
+import KrishnanagarAdmissionsPage from './pages/school/KrishnanagarAdmissionsPage';
+import KrishnanagarLifePage from './pages/school/KrishnanagarLifePage';
+import KrishnanagarContactPage from './pages/school/KrishnanagarContactPage';
+
 import './App.css';
 
 
@@ -154,6 +161,13 @@ function App() {
           <Route path="/schools/kolaghat/admissions" element={<Layout><KolaghatAdmissionsPage /></Layout>} />
           <Route path="/schools/kolaghat/life-at-tigps" element={<Layout><KolaghatLifePage /></Layout>} />
           <Route path="/schools/kolaghat/contact" element={<Layout><KolaghatContactPage /></Layout>} />
+
+          <Route path="/schools/krishnanagar" element={<Layout><KrishnanagarHomePage /></Layout>} />
+          <Route path="/schools/krishnanagar/about" element={<Layout><KrishnanagarAboutPage /></Layout>} />
+          <Route path="/schools/krishnanagar/academics" element={<Layout><KrishnanagarAcademicsPage /></Layout>} />
+          <Route path="/schools/krishnanagar/admissions" element={<Layout><KrishnanagarAdmissionsPage /></Layout>} />
+          <Route path="/schools/krishnanagar/life-at-tigps" element={<Layout><KrishnanagarLifePage /></Layout>} />
+          <Route path="/schools/krishnanagar/contact" element={<Layout><KrishnanagarContactPage /></Layout>} />
           
         </Routes>
       </div>
