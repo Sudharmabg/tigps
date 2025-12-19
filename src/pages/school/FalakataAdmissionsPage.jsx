@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../../components/Hero';
 
-const AdmissionsPage = () => {
+const FalakataAdmissionsPage = () => {
   return (
     <div className="admissions-page">
       <Hero image="/pictures/image.jpg" alt="TIGPS Admissions" />
@@ -81,38 +81,6 @@ const AdmissionsPage = () => {
             </div>
           </div>
           
-          <div style={{background: 'white', padding: '25px', borderRadius: '10px', border: '2px solid rgb(100, 19, 32)', marginBottom: '25px'}}>
-            <h4 style={{fontSize: '1.3rem', fontWeight: '600', color: 'rgb(100, 19, 32)', marginBottom: '15px', fontFamily: 'Lora'}}>Important Notes</h4>
-            <ul style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#333', fontFamily: 'Lora', paddingLeft: '20px'}}>
-              <li style={{marginBottom: '8px'}}>Admission is granted strictly on the basis of merit of the child.</li>
-              <li>Admission is purely on academic grounds. Any effort to influence the school will disqualify the candidate.</li>
-            </ul>
-          </div>
-          
-          <div style={{background: 'white', padding: '25px', borderRadius: '10px', border: '2px solid rgb(100, 19, 32)', marginBottom: '25px'}}>
-            <h4 style={{fontSize: '1.3rem', fontWeight: '600', color: 'rgb(100, 19, 32)', marginBottom: '15px', fontFamily: 'Lora'}}>Documents Required</h4>
-            <ol style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#333', fontFamily: 'Lora', paddingLeft: '20px'}}>
-              <li style={{marginBottom: '8px'}}>A photocopy of Birth Certificate from Kolkata Municipal Corporation/Municipality/Registrar attested by any Gazetted Officer.</li>
-              <li style={{marginBottom: '8px'}}>A photocopy of Report Card from the school last attended. (Not applicable for Play Group, Nursery and KG).</li>
-              <li>One Stamp Size Photograph of child.</li>
-            </ol>
-          </div>
-          
-          <div style={{background: 'white', padding: '25px', borderRadius: '10px', border: '2px solid rgb(100, 19, 32)', marginBottom: '25px'}}>
-            <h4 style={{fontSize: '1.3rem', fontWeight: '600', color: 'rgb(100, 19, 32)', marginBottom: '15px', fontFamily: 'Lora'}}>Refund of Fees</h4>
-            <ol style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#333', fontFamily: 'Lora', paddingLeft: '20px'}}>
-              <li style={{marginBottom: '8px'}}>Admission fees will not be refunded under any circumstances.</li>
-              <li style={{marginBottom: '8px'}}>Only intimation in writing within 30 days from admission date will be considered for security fees refund only.</li>
-              <li style={{marginBottom: '8px'}}>No security deposit refund after the stipulated period without proper intimation.</li>
-              <li>Under no circumstances will any dues be adjusted against the security deposit.</li>
-            </ol>
-          </div>
-          
-          <div style={{background: 'rgb(100, 19, 32)', color: 'white', padding: '20px', borderRadius: '10px', textAlign: 'center', marginBottom: '40px'}}>
-            <h4 style={{fontSize: '1.2rem', fontWeight: '600', marginBottom: '10px', fontFamily: 'Lora'}}>Withdrawal Policy</h4>
-            <p style={{fontSize: '0.95rem', lineHeight: '1.6', fontFamily: 'Lora', marginBottom: '0'}}>Those who take Transfer Certificate in middle of the academic year are liable to pay the fees for the remaining months of the entire academic year.</p>
-          </div>
-          
           <div style={{textAlign: 'center'}}>
             <img src="/pictures/admission/admission-open.png" alt="Admission Open" style={{maxWidth: '600px', width: '100%', borderRadius: '10px', boxShadow: '0 8px 20px rgba(0,0,0,0.1)'}}/>
           </div>
@@ -163,4 +131,4 @@ const AdmissionsPage = () => {
   );
 };
 
-export default AdmissionsPage;
+export default FalakataAdmissionsPage;

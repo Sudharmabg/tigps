@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getAllSchools } from '../config/schoolsConfig';
 
 function SchoolsListPage() {
-  const schools = getAllSchools();
+  const schools = [
+    { id: 'alipurduar', name: 'TIGPS Alipurduar', location: 'Alipurduar', heroImage: '/pictures/image.jpg', description: 'Excellence in education at Alipurduar', address: 'Alipurduar, West Bengal', contact: '+91-XXXXXXXXXX' },
+    { id: 'bolpur', name: 'TIGPS Bolpur', location: 'Bolpur', heroImage: '/pictures/image.jpg', description: 'Quality education in Bolpur', address: 'Bolpur, West Bengal', contact: '+91-XXXXXXXXXX' },
+    { id: 'coochbehar', name: 'TIGPS Coochbehar', location: 'Coochbehar', heroImage: '/pictures/image.jpg', description: 'Premier education in Coochbehar', address: 'Coochbehar, West Bengal', contact: '+91-XXXXXXXXXX' },
+    { id: 'durgapur', name: 'TIGPS Durgapur', location: 'Durgapur', heroImage: '/pictures/image.jpg', description: 'Educational excellence in Durgapur', address: 'Durgapur, West Bengal', contact: '+91-XXXXXXXXXX' },
+    { id: 'falakata', name: 'TIGPS Falakata', location: 'Falakata', heroImage: '/pictures/image.jpg', description: 'Quality learning in Falakata', address: 'Falakata, West Bengal', contact: '+91-XXXXXXXXXX' }
+  ];
 
   return (
     <div className="schools-list-page">

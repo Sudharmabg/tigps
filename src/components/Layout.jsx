@@ -1,14 +1,33 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
 function Layout({ children }) {
   const { schoolId } = useParams();
+  const location = useLocation();
+  
+  // For specific school routes, hardcode the schoolId
+  let finalSchoolId = schoolId;
+  if (location.pathname.startsWith('/schools/alipurduar')) {
+    finalSchoolId = 'alipurduar';
+  }
+  if (location.pathname.startsWith('/schools/bolpur')) {
+    finalSchoolId = 'bolpur';
+  }
+  if (location.pathname.startsWith('/schools/coochbehar')) {
+    finalSchoolId = 'coochbehar';
+  }
+  if (location.pathname.startsWith('/schools/durgapur')) {
+    finalSchoolId = 'durgapur';
+  }
+  if (location.pathname.startsWith('/schools/falakata')) {
+    finalSchoolId = 'falakata';
+  }
 
   return (
     <>
-      <Header schoolId={schoolId} />
+      <Header schoolId={finalSchoolId} />
       <main>{children}</main>
       <Footer />
     </>

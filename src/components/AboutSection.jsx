@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { getImageForSection } from '../config/schoolsConfig';
 import './AboutSection.css';
 
-const AboutSection = ({ schoolData }) => {
+const AboutSection = () => {
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const [showCta, setShowCta] = useState(false);
@@ -36,43 +35,26 @@ const AboutSection = ({ schoolData }) => {
   return (
     <section className="about-section">
       <div className="about-container">
-        <h2 ref={titleRef} className="about-title">{schoolData ? schoolData.name.toUpperCase() : 'TECHNO INDIA GROUP PUBLIC SCHOOL'}</h2>
+        <h2 ref={titleRef} className="about-title">TECHNO INDIA GROUP PUBLIC SCHOOL</h2>
         <div className="about-content">
           <div className="about-left-section">
             <div className="about-text-wrapper">
-              {schoolData?.content?.about?.text ? (
-                <p className="about-text">
-                  {schoolData.content.about.text}
-                </p>
-              ) : (
-                <>
                   <p className="about-text">
-                    {schoolData ? 
-                      `Welcome to ${schoolData.name}, where education meets excellence in ${schoolData.location}. As part of the prestigious Techno India Group, we are dedicated to nurturing young minds with a holistic approach to learning. Our curriculum blends academic rigor with co-curricular activities, ensuring students excel not only in examinations but also in sports, arts, and community engagement.` :
-                      'Welcome to Techno India Group Public Schools, where education meets excellence. As a premier chain of schools under the Techno India Group, we are dedicated to nurturing young minds with a holistic approach to learning. Our curriculum blends academic rigor with co-curricular activities, ensuring students excel not only in examinations but also in sports, arts, and community engagement.'
-                    }
+                    Welcome to Techno India Group Public Schools, where education meets excellence. As a premier chain of schools under the Techno India Group, we are dedicated to nurturing young minds with a holistic approach to learning. Our curriculum blends academic rigor with co-curricular activities, ensuring students excel not only in examinations but also in sports, arts, and community engagement.
                   </p>
                   <p className="about-text">
-                    {schoolData ? 
-                      `At ${schoolData.name}, we believe in fostering a supportive environment that encourages curiosity, creativity, and critical thinking. Our state-of-the-art facilities and qualified faculties ensure that every student receives personalized attention to reach their fullest potential.` :
-                      'At Techno India Group Public Schools, we believe in fostering a supportive environment that encourages curiosity, creativity, and critical thinking. Our state-of-the-art facilities and qualified faculties ensure that every student receives personalized attention to reach their fullest potential.'
-                    }
+                    At Techno India Group Public Schools, we believe in fostering a supportive environment that encourages curiosity, creativity, and critical thinking. Our state-of-the-art facilities and qualified faculties ensure that every student receives personalized attention to reach their fullest potential.
                   </p>
                   <p className="about-text">
-                    {schoolData ? 
-                      `Join us at ${schoolData.name} to experience education that goes beyond the textbooks, preparing students for a successful future in an ever-evolving world. Contact us at ${schoolData.contact} or visit our campus in ${schoolData.location} to discover the difference.` :
-                      'Join us to experience education that goes beyond the textbooks, preparing students for a successful future in an ever-evolving world. Explore our wide range of extracurricular programs, competitive exam preparation, and a commitment to overall student development. Discover the Techno India Group Public Schools difference today.'
-                    }
+                    Join us to experience education that goes beyond the textbooks, preparing students for a successful future in an ever-evolving world. Explore our wide range of extracurricular programs, competitive exam preparation, and a commitment to overall student development. Discover the Techno India Group Public Schools difference today.
                   </p>
-                </>
-              )}
             </div>
           </div>
           <div ref={imageRef} className="about-right-section">
             <div className="about-image-container">
               <img 
-                src={getImageForSection(schoolData, 'about', 'pictures/home/franchise-enquiry.jpg')} 
-                alt={schoolData ? `${schoolData.name} campus` : "Techno India Group Public School campus"} 
+                src="pictures/home/franchise-enquiry.jpg" 
+                alt="Techno India Group Public School campus" 
                 className="about-image"
                 loading="lazy"
               />

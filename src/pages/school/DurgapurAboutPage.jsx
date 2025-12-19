@@ -1,15 +1,13 @@
 import React from 'react';
-import MissionSection from '../../components/MissionSection';
 import FounderSection from '../../components/FounderSection';
-import LegacySection from '../../components/LegacySection';
 
-const AboutPage = () => {
+const DurgapurAboutPage = () => {
   return (
     <div>
       {/* Hero Image Section */}
       <section className="hero-image-section" style={{height: '60vh', overflow: 'hidden'}}>
         <img 
-          src="/pictures/image.jpg" 
+          src="/pictures/image.jpg"
           alt="TIGPS Campus" 
           style={{width: '100%', height: '100%', objectFit: 'cover'}}
         />
@@ -33,7 +31,7 @@ const AboutPage = () => {
             </div>
             <div className="col-lg-4">
               <img 
-                src="/pictures/image.jpg" 
+                src="/pictures/image.jpg"
                 alt="TIGPS Students" 
                 style={{width: '100%', borderRadius: '10px', boxShadow: '0 8px 20px rgba(0, 0, 0, 0.3)'}}
               />
@@ -99,8 +97,7 @@ const AboutPage = () => {
             A key feature of the TIGPS educational approach is the Continuous and Comprehensive Evaluation (CCE) system, implemented as per CBSE guidelines. This system emphasizes regular assessment and feedback, facilitating a well-rounded educational experience that supports both academic and personal growth. The CCE framework ensures that evaluations are conducted throughout the academic year, providing a balanced and thorough assessment of each student's progress.
           </p>
           
-          <p style={{fontSize: '0.9rem', textAlign: 'center', marginBottom: '10px', fontFamily: 'Lora', display: window.innerWidth <= 768 ? 'block' : 'none'}}>← Scroll horizontally to view all columns →</p>
-          <div style={{overflowX: 'auto', marginBottom: '30px', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'thin', scrollbarColor: 'rgba(255,255,255,0.5) transparent'}}>
+          <div style={{overflowX: 'auto', marginBottom: '30px'}}>
             <table style={{width: '100%', minWidth: '600px', maxWidth: '800px', margin: '0 auto', backgroundColor: 'white', color: '#333', borderRadius: '10px', overflow: 'hidden', fontFamily: 'Lora', border: '2px solid #333', borderCollapse: 'collapse'}}>
               <thead>
                 <tr style={{backgroundColor: 'white'}}>
@@ -321,4 +318,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default DurgapurAboutPage;

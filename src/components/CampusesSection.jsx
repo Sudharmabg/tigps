@@ -1,16 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
-import { getAllSchools } from '../config/schoolsConfig';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './CampusesSection.css';
 
-const CampusesSection = ({ schoolData }) => {
+const CampusesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef(null);
-  const schools = getAllSchools();
+  const schools = [
+    { id: 'alipurduar', name: 'TIGPS Alipurduar', location: 'Alipurduar', heroImage: '/pictures/image.jpg' },
+    { id: 'bolpur', name: 'TIGPS Bolpur', location: 'Bolpur', heroImage: '/pictures/image.jpg' },
+    { id: 'coochbehar', name: 'TIGPS Coochbehar', location: 'Coochbehar', heroImage: '/pictures/image.jpg' },
+    { id: 'durgapur', name: 'TIGPS Durgapur', location: 'Durgapur', heroImage: '/pictures/image.jpg' },
+    { id: 'falakata', name: 'TIGPS Falakata', location: 'Falakata', heroImage: '/pictures/image.jpg' }
+  ];
 
   useEffect(() => {
     const checkMobile = () => {
@@ -75,34 +80,13 @@ const CampusesSection = ({ schoolData }) => {
   return (
     <section ref={sectionRef} className="campuses-section">
       <div className="campuses-container">
-        <h2 className="campuses-title">{schoolData ? 'OUR FACILITIES' : 'OUR CAMPUSES'}</h2>
+        <h2 className="campuses-title">OUR CAMPUSES</h2>
         <p className="campuses-subtitle">
-          {schoolData ? 
-            `Discover world-class facilities at ${schoolData.name}` : 
-            `Explore our ${schools.length} schools across West Bengal`
-          }
+          Explore our {schools.length} schools across West Bengal
         </p>
         
         <Slider {...settings} className="campuses-slider">
-          {schoolData ? 
-            schoolData.facilities?.map((facility, index) => (
-              <div key={index} className="campus-slide">
-                <div className="campus-card">
-                  <div className="campus-image">
-                    <img src={schoolData.heroImage} alt={facility.title} />
-                  </div>
-                  <div className="campus-content">
-                    <h3 className="campus-name">{facility.title}</h3>
-                    <p className="campus-location">{facility.description}</p>
-                    <div className="campus-cta">
-                      Learn More
-                      <i className="fas fa-arrow-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )) :
-            schools.map((school, index) => (
+            {schools.map((school, index) => (
               <div key={index} className="campus-slide">
                 <div className="campus-card">
                   <div className="campus-image">
@@ -118,19 +102,13 @@ const CampusesSection = ({ schoolData }) => {
                   </div>
                 </div>
               </div>
-            ))
-          }
+            ))}
         </Slider>
 
         <div className="campuses-view-all">
-          {schoolData ? 
-            <Link to={`/schools/${schoolData.id}/contact`} className="view-all-btn">
-              Contact Us
-            </Link> :
             <Link to="/schools" className="view-all-btn">
               View All Schools
             </Link>
-          }
         </div>
       </div>
     </section>

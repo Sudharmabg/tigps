@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { getImageForSection } from '../config/schoolsConfig';
 
-function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', schoolData }) {
+function Hero({ carousel = false, video = null, fallbackImage = null, image = 'pictures/image.jpg', alt = 'TIGPS' }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   
-  // Use school-specific carousel images or master carousel
-  const banners = schoolData?.carouselImages || [
+  // Master carousel images
+  const banners = [
     '/pictures/hero_section/banner-tigps-1.webp',
     '/pictures/hero_section/banner-tigps-2.png',
     '/pictures/hero_section/banner-tigps-3.png'
@@ -26,6 +25,39 @@ function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', s
       return () => clearInterval(interval);
     }
   }, [carousel]);
+
+  // Video hero
+  if (video) {
+    return (
+      <section style={{ position: 'relative', width: '100%', height: isMobile ? 'auto' : '75vh', minHeight: isMobile ? '0' : '550px', maxHeight: isMobile ? 'none' : '850px', overflow: 'hidden' }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center'
+          }}
+          poster={fallbackImage || image}
+        >
+          <source src={video} type="video/mp4" />
+          <img 
+            src={fallbackImage || image} 
+            alt={alt}
+            style={{
+              width: '100%',
+              height: isMobile ? 'auto' : '100%',
+              objectFit: isMobile ? 'contain' : 'cover'
+            }}
+          />
+        </video>
+      </section>
+    );
+  }
 
   if (carousel) {
     return (
@@ -82,7 +114,7 @@ function Hero({ carousel = false, image = 'pictures/image.jpg', alt = 'TIGPS', s
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src={getImageForSection(schoolData, 'hero', image)} alt={schoolData ? schoolData.name : alt} />
+        <img src={image} alt={alt} />
       </div>
     </section>
   );

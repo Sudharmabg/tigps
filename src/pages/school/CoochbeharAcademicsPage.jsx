@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../../components/Hero';
 
-const AcademicsPage = () => {
+const CoochbeharAcademicsPage = () => {
   return (
     <div className="academics-page">
       <Hero image="/pictures/image.jpg" alt="TIGPS Academics" />
@@ -438,4 +438,4 @@ const AcademicsPage = () => {
   );
 };
 
-export default AcademicsPage;
+export default CoochbeharAcademicsPage;
